@@ -6,3 +6,6 @@ If you find anything useful online that may help anyone, you can post the link h
 
 A guide to Stealth Design
 https://www.youtube.com/watch?v=jmW8HPo4qGc
+
+What makes a good stealth game
+https://www.youtube.com/watch?v=UC22ZF21Llk
