@@ -1,5 +1,5 @@
 # Team14GameDevelopment
-We are here to make games and chew bubblegum... and I'm all out of gum.
+We are here to make games and chew bubblegum... and we're all out of gum.
 
 Speak to James Heath (Heathage) if you are confused on how GitHub works, or if you need to install it. 
 If you find anything useful online that may help anyone, you can post the link here and it will save the link for us. 
