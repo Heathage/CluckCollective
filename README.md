@@ -1,4 +1,6 @@
-# Who is Robin?
+# Cluck Collective
+![Logo by the fantastic Lyra](https://i.imgur.com/mANHIm5.png)
+
 We are here to make games and chew bubblegum... and we're all out of gum.
 
 Speak to James Heath (Heathage) if you are confused on how GitHub works, or if you need to install it. 
