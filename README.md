@@ -11,3 +11,6 @@ https://www.youtube.com/watch?v=jmW8HPo4qGc
 
 What makes a good stealth game
 https://www.youtube.com/watch?v=UC22ZF21Llk
+
+Important:- Link detailing what to consider when making a rhythm game
+https://www.reddit.com/r/gamedev/comments/13y26t/how_do_rhythm_games_stay_in_sync_with_the_music/c78aawd/
