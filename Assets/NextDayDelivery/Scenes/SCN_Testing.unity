@@ -290,7 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c5c303a02a7b04aade6ba25e894cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crouching: 0.9
+  crouching: 1.25
+  standing: 3.8
   crouchKey: 99
 --- !u!1001 &368549965170190023
 PrefabInstance:

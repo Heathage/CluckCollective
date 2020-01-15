@@ -4,32 +4,19 @@ public class Crouching : MonoBehaviour
 {
     private CharacterController CharacterController;
 
-    private bool crouch = false;
+    public float crouching = 0f;
 
-    private float standing;
-
-    [SerializeField] private float crouching = 0.9f;
+    public float standing = 0f;
 
     public KeyCode crouchKey = KeyCode.C;
     void Start()
     {
         CharacterController = GetComponent<CharacterController>();
-        standing = CharacterController.height;
     }
 
     void Update()
     {
         if(Input.GetKey(crouchKey))
-        {
-            crouch = !crouch;
-
-            CheckCrouch();
-        }
-    }
-
-    void CheckCrouch()
-    {
-        if(crouch == true)
         {
             CharacterController.height = crouching;
         }
