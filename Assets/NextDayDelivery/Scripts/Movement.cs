@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public Crouching crouching;
+
     public CharacterController controller;
 
-    public float speed = 12f;
+    public float speed = 0f;
     public float gravity = -9.81f;
 
     public Transform groundCheck;
@@ -15,6 +17,7 @@ public class Movement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+    public bool crouched;
 
     // Update is called once per frame
     void Update()
@@ -34,11 +37,17 @@ public class Movement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
+        crouchCheck();
         controller.Move(move * speed * Time.deltaTime);
 
         //Controls player fall speed. 
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void crouchCheck()
+    {
+        if 
     }
 }

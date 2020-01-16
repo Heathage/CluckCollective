@@ -16,6 +16,7 @@ public class Crouching : MonoBehaviour
 
     void Update()
     {
+
         if(Input.GetKey(crouchKey))
         {
             CharacterController.height = crouching;
