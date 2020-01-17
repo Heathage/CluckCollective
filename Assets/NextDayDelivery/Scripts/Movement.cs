@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public Crouching crouching;
-
     public CharacterController controller;
 
     float speed = 0f;
