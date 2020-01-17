@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     float speed = 0f;
     public float walkSpeed = 12f;
     public float crouchSpeed = 6f;
+    public float runSpeed = 18f;
     public float gravity = -9.81f;
 
     public Transform groundCheck;
@@ -27,6 +28,10 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.C))
         {
             speed = crouchSpeed;
+        }
+        else if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = runSpeed;
         }
         else
         {
