@@ -7,10 +7,10 @@ public class Movement : MonoBehaviour
     public CharacterController controller;
 
     float speed = 0f;
-    public float walkSpeed = 12f;
-    public float crouchSpeed = 6f;
-    public float runSpeed = 18f;
-    public float gravity = -9.81f;
+    public float walkSpeed = 0f;
+    public float crouchSpeed = 0f;
+    public float runSpeed = 0f;
+    public float gravity = 0f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
