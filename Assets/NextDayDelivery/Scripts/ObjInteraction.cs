@@ -4,23 +4,6 @@ using UnityEngine;
 
 public class ObjInteraction : MonoBehaviour
 {
-    //public Transform holdPos;
-    //void OnMouseDown()
-    //{
-    //    GetComponent<BoxCollider>().enabled = false;
-    //    GetComponent<Rigidbody>().useGravity = false;
-    //    this.transform.position = holdPos.position;
-    //    this.transform.parent = GameObject.Find("OBJ_Holding").transform;
-    //}
-
-    //private void OnMouseUp()
-    //{
-    //    this.transform.parent = null;
-    //    GetComponent<Rigidbody>().useGravity = true;
-    //    GetComponent<BoxCollider>().enabled = true;
-
-    //}
-
     float throwForce = 600;
     Vector3 objectPos;
     float distance;
@@ -62,7 +45,7 @@ public class ObjInteraction : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        if ((!isHolding) && (distance <= 4f))
+        if ((!isHolding) && (distance <= 3f))
         {
             isHolding = true;
             item.GetComponent<Rigidbody>().useGravity = false;
@@ -73,6 +56,14 @@ public class ObjInteraction : MonoBehaviour
         else if (isHolding)
         {
             isHolding = false;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (isHolding)
+        {
+            item.transform.localPosition = new Vector3(0, 0, 0);
         }
     }
 }
