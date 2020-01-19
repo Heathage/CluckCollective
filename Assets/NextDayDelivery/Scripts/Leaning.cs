@@ -10,7 +10,7 @@ public class Leaning : MonoBehaviour
         {
             Debug.Log("R");
             
-            transform.localRotation = Quaternion.Euler(0f, 0f, -45f);
+            transform.localRotation = Quaternion.Euler(0f, 0f, -30f);
             transform.localPosition = new Vector3(1, 1.77f, 0);
         }
 
@@ -20,7 +20,7 @@ public class Leaning : MonoBehaviour
         }
         else if (Input.GetKey("q"))
         {
-            transform.localRotation = Quaternion.Euler(0f, 0f, 45f);
+            transform.localRotation = Quaternion.Euler(0f, 0f, 30f);
             transform.localPosition = new Vector3(-1, 1.77f, 0);
         }
         else if (Input.GetKeyUp("q"))
