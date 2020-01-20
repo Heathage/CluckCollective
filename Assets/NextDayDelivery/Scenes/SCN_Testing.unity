@@ -18197,7 +18197,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-11042
+  m_Name: pb_Mesh16416
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -18357,7 +18357,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-65622
+  m_Name: pb_Mesh16428
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -18625,7 +18625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crouching: 1.25
-  standing: 3.8
+  standing: 1.7
   crouchKey: 99
 --- !u!43 &1793699592
 Mesh:
@@ -18633,7 +18633,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-47784
+  m_Name: pb_Mesh16440
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -18812,7 +18812,7 @@ PrefabInstance:
     - target: {fileID: 368549965077023018, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.22
+      value: 9.05
       objectReference: {fileID: 0}
     - target: {fileID: 368549965077023018, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
@@ -18882,7 +18882,12 @@ PrefabInstance:
     - target: {fileID: 368549965077023019, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
       propertyPath: m_Height
-      value: 3.8
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 368549965077023019, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7998576670790989131, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
@@ -18919,6 +18924,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7998576670790989131, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.599
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998576670790989131, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 368549965077023017, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
       propertyPath: gravity
@@ -18948,6 +18963,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351302961835916884, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351302961835916884, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351302961835916884, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351302961835916884, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: field of view
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24c62c118cfb02b45b1f38b147c380a8, type: 3}
