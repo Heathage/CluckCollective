@@ -18624,7 +18624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c5c303a02a7b04aade6ba25e894cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crouching: 1.25
+  crouching: 0.85
   standing: 1.7
   crouchKey: 99
 --- !u!43 &1793699592
@@ -18927,7 +18927,7 @@ PrefabInstance:
     - target: {fileID: 7998576670790989131, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.599
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7998576670790989131, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
@@ -18963,6 +18963,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 368549966487192738, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.88
       objectReference: {fileID: 0}
     - target: {fileID: 6351302961835916884, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
