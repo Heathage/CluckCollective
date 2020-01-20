@@ -19033,5 +19033,15 @@ PrefabInstance:
       propertyPath: pickUpDistance
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2511654486584223979, guid: c6d0d05dd39d32449aae8d448d12575f,
+        type: 3}
+      propertyPath: throwForce
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511654486584223982, guid: c6d0d05dd39d32449aae8d448d12575f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6d0d05dd39d32449aae8d448d12575f, type: 3}
