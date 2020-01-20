@@ -2,10 +2,21 @@
 
 public class Leaning : MonoBehaviour
 {
-    public float leanRightAngle = 0f;
-    public float leanRightDistance = 0f;
-    public float leanLeftAngle = 0f;
-    public float leanLeftDistance = 0f;
+    public float leanDistance = 1f;
+    public float leanAngle = 30f;
+
+    float leanRightDistance;
+    float leanLeftAngle;
+    float leanLeftDistance;
+    float leanRightAngle;
+
+    void Start() 
+    {
+        leanRightDistance = leanDistance;
+        leanLeftAngle = leanAngle;
+        leanLeftDistance = leanDistance * -1;
+        leanRightAngle = leanAngle * -1;
+    }
     void Update()
     {
         if (Input.GetKey("r"))
