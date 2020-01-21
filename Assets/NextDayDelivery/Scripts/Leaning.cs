@@ -26,7 +26,8 @@ public class Leaning : MonoBehaviour
         {
             Debug.Log("R");
 
-            transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanRightAngle, 0f), leanSpeed * Time.deltaTime);
+            //transform.localRotation = Quaternion.Euler(0f, 0f, leanRightAngle);
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanRightAngle, 100f), leanSpeed * Time.deltaTime);
             //transform.localRotation = Quaternion.RotateTowards(transform.localRotation, new Quaternion(0f, 0f, leanRightAngle*10,0), leanSpeed);
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(leanRightDistance, camHeight, 0), leanSpeed);
             //transform.localPosition = new Vector3(leanRightDistance, camHeight, 0);
