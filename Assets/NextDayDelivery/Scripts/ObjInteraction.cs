@@ -74,12 +74,14 @@ public class ObjInteraction : MonoBehaviour
         }
     }
 
-    //Resets the position of the object to the centre of the screen if it is knocked off centre by a collision. 
-    private void OnCollisionExit(Collision collision)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (isHolding)
-        {
-            item.transform.localPosition = new Vector3(0, 0, 0);
-        }
+        
     }
+    //Resets the position of the object to the centre of the screen if it is knocked off centre by a collision. 
+    //private void OnCollisionExit(Collision collision)
+    //{
+            //item.transform.localPosition = new Vector3(0, 0, 0);
+    //}
 }
