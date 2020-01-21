@@ -11,7 +11,7 @@ public class Leaning : MonoBehaviour
     float leanLeftDistance;
     float leanRightAngle;
 
-    float camHeight = 0.6f;
+    float camHeight = 1.4f;
 
     void Start() 
     {
