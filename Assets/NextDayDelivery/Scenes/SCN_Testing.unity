@@ -39655,7 +39655,12 @@ PrefabInstance:
     - target: {fileID: 5939254374170175042, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
       propertyPath: m_Radius
-      value: 0.5
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939254374170175042, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: m_SkinWidth
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5939254373735370713, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
