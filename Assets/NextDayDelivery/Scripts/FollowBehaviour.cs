@@ -16,7 +16,7 @@ public class FollowBehaviour : StateMachineBehaviour
         animator.transform.position = Vector3.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
         if (!FOVDetection.isInFov)
         {
-            animator.SetBool("isPlayerLost", true);
+            animator.SetBool("isPatrolling", true);
         }
     }
 
