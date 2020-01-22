@@ -8,17 +8,19 @@ public class Crouching : MonoBehaviour
 
     public float standing = 0f;
 
+    public bool crouched = false;
+
     public KeyCode crouchKey = KeyCode.C;
     void Start()
     {
         CharacterController = GetComponent<CharacterController>();
     }
-
     void Update()
     {
-
-        if (Input.GetKey(crouchKey))
+        if (Input.GetKeyDown(KeyCode.C))
         {
+            crouched = true;
+            CharacterController.center = new Vector3(0, -1, 0);
             CharacterController.height = crouching;
 
             //while (CharacterController.height != standing)
@@ -27,11 +29,13 @@ public class Crouching : MonoBehaviour
             //}
         }
 
-        else 
+        if (Input.GetKeyUp(KeyCode.C))
         {
-            //CharacterController.center = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
-            CharacterController.center = new Vector3(0, 1f, 0);
+            crouched = false;
+            CharacterController.center = new Vector3(0, 0, 0);
+            //transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
             CharacterController.height = standing;
+            //CharacterController.center = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
             //CharacterController.center = new Vector3(0, transform.position.y + 0.5f, 0);
         }
     }

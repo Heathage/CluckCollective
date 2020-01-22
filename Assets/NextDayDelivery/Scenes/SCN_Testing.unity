@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -39629,6 +39629,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBJ_PickUpTest (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4033684394639668132, guid: e95a4f0b44165f74ea2fce98140c7434,
+        type: 3}
+      propertyPath: tempParent
+      value: 
+      objectReference: {fileID: 1149701513}
     - target: {fileID: 4033684394639668143, guid: e95a4f0b44165f74ea2fce98140c7434,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39684,11 +39689,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4033684394639668132, guid: e95a4f0b44165f74ea2fce98140c7434,
-        type: 3}
-      propertyPath: tempParent
-      value: 
-      objectReference: {fileID: 1149701513}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e95a4f0b44165f74ea2fce98140c7434, type: 3}
 --- !u!1001 &5939254374362286510
@@ -39848,6 +39848,16 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8617947987753908938, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: m_Height
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634441845534138855, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: crouching
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24c62c118cfb02b45b1f38b147c380a8, type: 3}
 --- !u!1001 &9171935387277197649
@@ -39862,6 +39872,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBJ_PickUpTest
       objectReference: {fileID: 0}
+    - target: {fileID: 9171935386612423984, guid: c6d0d05dd39d32449aae8d448d12575f,
+        type: 3}
+      propertyPath: tempParent
+      value: 
+      objectReference: {fileID: 1149701513}
     - target: {fileID: 9171935386612423991, guid: c6d0d05dd39d32449aae8d448d12575f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39917,10 +39932,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9171935386612423984, guid: c6d0d05dd39d32449aae8d448d12575f,
-        type: 3}
-      propertyPath: tempParent
-      value: 
-      objectReference: {fileID: 1149701513}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6d0d05dd39d32449aae8d448d12575f, type: 3}
