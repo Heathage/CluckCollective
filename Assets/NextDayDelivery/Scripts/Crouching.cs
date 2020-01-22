@@ -17,11 +17,17 @@ public class Crouching : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKey(crouchKey))
+        if (Input.GetKey(crouchKey))
         {
             CharacterController.height = crouching;
+
+            while (CharacterController.height != standing)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+            }
         }
-        else
+
+        else 
         {
             CharacterController.height = standing;
         }
