@@ -21,15 +21,18 @@ public class Crouching : MonoBehaviour
         {
             CharacterController.height = crouching;
 
-            while (CharacterController.height != standing)
-            {
-                transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
-            }
+            //while (CharacterController.height != standing)
+            //{
+            //    transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+            //}
         }
 
         else 
         {
+            //CharacterController.center = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+            CharacterController.center = new Vector3(0, 1f, 0);
             CharacterController.height = standing;
+            //CharacterController.center = new Vector3(0, transform.position.y + 0.5f, 0);
         }
     }
 }
