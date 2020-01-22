@@ -6,7 +6,7 @@ public class FOVDetection : MonoBehaviour
     public float maxAngle;
     public float maxRadius;
 
-    private bool isInFov = false;
+    public static bool isInFov = false;
 
     private void OnDrawGizmos()
     {
