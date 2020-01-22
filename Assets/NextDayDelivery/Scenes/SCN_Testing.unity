@@ -39858,6 +39858,21 @@ PrefabInstance:
       propertyPath: crouching
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 4634441845534138855, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: crouchCam
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634441845534138855, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: crouchSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634441845534138855, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: standCam
+      value: 1.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24c62c118cfb02b45b1f38b147c380a8, type: 3}
 --- !u!1001 &9171935387277197649

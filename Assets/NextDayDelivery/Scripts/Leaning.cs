@@ -22,7 +22,18 @@ public class Leaning : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey("r"))
+        if (Input.GetKey("c"))
+        {
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, 0, 0), leanSpeed);
+            
+        }
+
+        else if (Input.GetKeyUp("c"))
+        {
+            transform.localPosition = new Vector3(0, camHeight, 0);
+        }
+
+        else if (Input.GetKey("r"))
         {
             Debug.Log("R");
 
