@@ -2,21 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdleBehaviour : StateMachineBehaviour
+public class FollowBehaviour : StateMachineBehaviour
 {
+    private Transform playerPos;
+    public float speed;
+    public float angularSpeed;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        animator.SetBool("isPlayerLost", false);
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (FOVDetection.isInFov)
+        animator.transform.position = Vector3.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
+        Vector3 targetDirection = playerPos.position - animator.transform.position;
+        float singleStep = angularSpeed * Time.deltaTime;
+        Vector3 newDirection = Vector3.RotateTowards(animator.transform.forward, targetDirection, singleStep, 0.0f);
+        animator.transform.rotation = Quaternion.LookRotation(newDirection);
+        if (!FOVDetection.isInFov)
         {
-            animator.SetBool("isPatroling", true);
+            animator.SetBool("isPlayerLost", true);
         }
     }
-
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         

@@ -5,6 +5,7 @@ public class FOVDetection : MonoBehaviour
     public Transform player;
     public float maxAngle;
     public float maxRadius;
+    public static Vector3 playerLastKnownPos;
 
     public static bool isInFov = false;
 
@@ -72,5 +73,10 @@ public class FOVDetection : MonoBehaviour
     private void Update()
     {
         isInFov = InFOV(transform, player, maxAngle, maxRadius);
+        if (isInFov)
+        {
+            playerLastKnownPos = player.position;
+        }
+
     }
 }
