@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         //Checks to see if player is crouching, adjusts speed to match.
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
             speed = crouchSpeed;
         }

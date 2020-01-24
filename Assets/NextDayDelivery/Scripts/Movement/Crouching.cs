@@ -13,15 +13,16 @@ public class Crouching : MonoBehaviour
     public float standCam = 0f; 
 
     public bool crouched = false;
+    public bool crouchBlocked = false;
 
-    public KeyCode crouchKey = KeyCode.C;
+    public KeyCode crouchKey = KeyCode.LeftControl;
     void Start()
     {
         CharacterController = GetComponent<CharacterController>();
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             crouched = true;
             CharacterController.center = new Vector3(0, -1, 0);
@@ -35,7 +36,7 @@ public class Crouching : MonoBehaviour
             //}
         }
 
-        if (Input.GetKeyUp(KeyCode.C))
+        if (Input.GetKeyUp(KeyCode.LeftControl)) //&& (crouchBlocked = false))
         {
             crouched = false;
             //GameObject.Find("PRF_MainCamera3D").transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, standCam, 0), crouchSpeed);
@@ -45,5 +46,14 @@ public class Crouching : MonoBehaviour
             //CharacterController.center = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
             //CharacterController.center = new Vector3(0, transform.position.y + 0.5f, 0);
         }
+    }
+    public void CrouchBlock()
+    {
+        crouchBlocked = true;
+    }
+
+    public void NotCrouchBlock()
+    {
+        crouchBlocked = false;
     }
 }
