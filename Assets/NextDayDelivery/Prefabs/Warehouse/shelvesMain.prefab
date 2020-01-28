@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1705258570357177946}
   - component: {fileID: 1872438785579169559}
   m_Layer: 0
-  m_Name: shelves_main
+  m_Name: shelvesMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,5 +117,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.1316183, y: 0.086799145, z: 1.0540125}
-  m_Center: {x: 0, y: -0.040390134, z: 0}
+  m_Size: {x: 2.1316183, y: 0.011322975, z: 1.0540125}
+  m_Center: {x: 0, y: -0.002652049, z: 0}
