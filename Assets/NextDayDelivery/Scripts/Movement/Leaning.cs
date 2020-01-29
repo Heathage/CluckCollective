@@ -34,29 +34,22 @@ public class Leaning : MonoBehaviour
 
         else if (Input.GetKey("e"))
         {
-            //transform.localRotation = Quaternion.Euler(0f, 0f, leanRightAngle);
             transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanRightAngle, 100f), leanSpeed * Time.deltaTime);
-            //transform.localRotation = Quaternion.RotateTowards(transform.localRotation, new Quaternion(0f, 0f, leanRightAngle*10,0), leanSpeed);
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(leanRightDistance, camHeight, 0), leanSpeed);
-            //transform.localPosition = new Vector3(leanRightDistance, camHeight, 0);
         }
 
         else if (Input.GetKeyUp("e"))
         {
             transform.localPosition = new Vector3(0, camHeight, 0);
-            //transform.localPosition = Vector3.MoveTowards(new Vector3(leanRightDistance, camHeight, 0), new Vector3(0, camHeight, 0), leanSpeed);
         }
         else if (Input.GetKey("q"))
         {
             transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanLeftAngle, 0f), leanSpeed * Time.deltaTime);
-            //transform.localRotation = Quaternion.Euler(0f, 0f, leanLeftAngle);
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(leanLeftDistance, camHeight, 0), leanSpeed);
-            //transform.localPosition = new Vector3(leanLeftDistance, camHeight, 0);
         }
         else if (Input.GetKeyUp("q"))
         {
             transform.localPosition = new Vector3(0, camHeight, 0);
-            //transform.localPosition = Vector3.MoveTowards(new Vector3(leanLeftDistance, camHeight, 0), new Vector3(0, camHeight, 0), leanSpeed);
         }
         
     }

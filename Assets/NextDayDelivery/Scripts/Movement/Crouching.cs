@@ -20,6 +20,7 @@ public class Crouching : MonoBehaviour
     {
         CharacterController = GetComponent<CharacterController>();
     }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
@@ -27,24 +28,13 @@ public class Crouching : MonoBehaviour
             crouched = true;
             CharacterController.center = new Vector3(0, -1, 0);
             CharacterController.height = crouching;
-            //GameObject.FindGameObjectWithTag("MainCamera").transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, 0, 0), crouchSpeed);
-
-
-            //while (CharacterController.height != standing)
-            //{
-            //    transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
-            //}
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftControl)) //&& (crouchBlocked = false))
+        else if (Input.GetKeyUp(KeyCode.LeftControl)) //&& (crouchBlocked = true))
         {
             crouched = false;
-            //GameObject.Find("PRF_MainCamera3D").transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, standCam, 0), crouchSpeed);
-            CharacterController.center = new Vector3(0, 0, 0);
-            //transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+            CharacterController.center = new Vector3(0, -0, 0);
             CharacterController.height = standing;
-            //CharacterController.center = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
-            //CharacterController.center = new Vector3(0, transform.position.y + 0.5f, 0);
         }
     }
     public void CrouchBlock()

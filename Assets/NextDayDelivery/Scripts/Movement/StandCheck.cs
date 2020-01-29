@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class StandCheck : MonoBehaviour
 {
+    public GameObject player;
 
-    private void OnTriggerEnter(Collider other)
+    public bool blocked = false;
+
+    private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Blocked");
-        //stand.CrouchBlock();
+        Crouching test = player.GetComponent<Crouching>();
+        test.crouchBlocked = true;
     }
 
     private void OnCollisionExit(Collision collision)
     {
         Debug.Log("Unblocked");
-        //stand.NotCrouchBlock();
+        Crouching test = player.GetComponent<Crouching>();
+        test.crouchBlocked = false;
+     
     }
 }
 
