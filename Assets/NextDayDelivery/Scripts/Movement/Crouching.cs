@@ -29,14 +29,29 @@ public class Crouching : MonoBehaviour
             CharacterController.center = new Vector3(0, -1, 0);
             CharacterController.height = crouching;
         }
+        else if (crouchBlocked == true)// && (Input.GetKeyDown(KeyCode.LeftControl)))
+        {
+            crouched = true;
+            CharacterController.center = new Vector3(0, -1, 0);
+            CharacterController.height = crouching;
+        }
 
-        else if (Input.GetKeyUp(KeyCode.LeftControl)) //&& (crouchBlocked = true))
+        else if (Input.GetKeyUp(KeyCode.LeftControl) && (crouchBlocked == false))
         {
             crouched = false;
-            CharacterController.center = new Vector3(0, -0, 0);
+            CharacterController.center = new Vector3(0, 0, 0);
             CharacterController.height = standing;
         }
+
+        crouchBlocked = IsCeilingAbove(1.5f);
     }
+
+    private bool IsCeilingAbove(float distance)
+    {
+        Debug.DrawRay(transform.position, transform.up * distance, Color.red);
+        return Physics.Raycast(transform.position, transform.up, distance);
+    }
+
     public void CrouchBlock()
     {
         crouchBlocked = true;
