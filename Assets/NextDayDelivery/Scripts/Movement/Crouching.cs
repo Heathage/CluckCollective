@@ -23,7 +23,7 @@ public class Crouching : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl) || (crouchBlocked == true))
+        if (Input.GetKey(KeyCode.LeftControl) || (crouchBlocked == true))
         {
             crouched = true;
             CharacterController.center = new Vector3(0, -1, 0);
@@ -41,7 +41,7 @@ public class Crouching : MonoBehaviour
             crouched = false;
         }
 
-        else if (Input.GetKeyUp(KeyCode.LeftControl) && (crouchBlocked == false))
+        else if (crouchBlocked == false)
         {
             crouched = false;
             CharacterController.center = new Vector3(0, 0, 0);

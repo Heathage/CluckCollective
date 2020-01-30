@@ -2,6 +2,8 @@
 
 public class Leaning : MonoBehaviour
 {
+    public Crouching isCrouched;
+
     public float leanDistance = 1f;
     public float leanAngle = 30f;
     public float leanSpeed = 0.1f;
@@ -24,7 +26,7 @@ public class Leaning : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftControl))
         {
-            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, 0, 0), leanSpeed);
+                transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, 0, 0), leanSpeed);
         }
 
         else if (Input.GetKeyUp(KeyCode.LeftControl))
