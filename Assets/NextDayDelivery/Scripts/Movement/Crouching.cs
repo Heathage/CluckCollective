@@ -23,17 +23,22 @@ public class Crouching : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) || (crouchBlocked == true))
         {
             crouched = true;
             CharacterController.center = new Vector3(0, -1, 0);
             CharacterController.height = crouching;
         }
-        else if (crouchBlocked == true)// && (Input.GetKeyDown(KeyCode.LeftControl)))
+
+        else if ((crouchBlocked == false) && (crouched == false))
         {
-            crouched = true;
-            CharacterController.center = new Vector3(0, -1, 0);
-            CharacterController.height = crouching;
+            CharacterController.center = new Vector3(0, 0, 0);
+            CharacterController.height = standing;
+        }
+
+        else if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            crouched = false;
         }
 
         else if (Input.GetKeyUp(KeyCode.LeftControl) && (crouchBlocked == false))
