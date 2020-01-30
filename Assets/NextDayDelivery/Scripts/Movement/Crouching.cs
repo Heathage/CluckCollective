@@ -7,7 +7,7 @@ public class Crouching : MonoBehaviour
     public float crouching = 0f;
     public float crouchCam = 0f;
 
-    public float crouchSpeed = 0f;
+    public float crouchSpeed = 0.1f;
 
     public float standing = 0f;
     public float standCam = 0f; 

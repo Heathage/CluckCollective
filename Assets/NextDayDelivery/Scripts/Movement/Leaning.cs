@@ -13,7 +13,7 @@ public class Leaning : MonoBehaviour
     float leanLeftDistance;
     float leanRightAngle;
 
-    float camHeight = 1.4f;
+    public float camHeight = 1.4f;
 
     void Start() 
     {
@@ -26,15 +26,17 @@ public class Leaning : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftControl))
         {
-                transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, 0, 0), leanSpeed);
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, 0, 0), leanSpeed);
         }
 
+        //if (isCrouched.crouchBlocked == false)
+        //{
         else if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             transform.localPosition = new Vector3(0, camHeight, 0);
         }
 
-        else if (Input.GetKey("e"))
+        if (Input.GetKey("e"))
         {
             transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanRightAngle, 100f), leanSpeed * Time.deltaTime);
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(leanRightDistance, camHeight, 0), leanSpeed);
