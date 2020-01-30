@@ -29,11 +29,10 @@ public class Leaning : MonoBehaviour
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, 0, 0), leanSpeed);
         }
 
-        //if (isCrouched.crouchBlocked == false)
-        //{
         else if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             transform.localPosition = new Vector3(0, camHeight, 0);
+
         }
 
         if (Input.GetKey("e"))

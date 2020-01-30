@@ -15,7 +15,6 @@ public class Crouching : MonoBehaviour
     public bool crouched = false;
     public bool crouchBlocked = false;
 
-    public KeyCode crouchKey = KeyCode.LeftControl;
     void Start()
     {
         CharacterController = GetComponent<CharacterController>();
