@@ -5,9 +5,8 @@ public class FOVDetection : MonoBehaviour
     public Transform player;
     public float maxAngle;
     public float maxRadius;
-    public static Vector3 playerLastKnownPos;
-
-    public static bool isInFov = false;
+    public Vector3 playerLastKnownPos;
+    public bool isInFov = false;
 
     private void OnDrawGizmos()
     {
@@ -35,7 +34,7 @@ public class FOVDetection : MonoBehaviour
         Gizmos.DrawRay(transform.position, transform.forward * maxRadius);
     }
 
-    public static bool InFOV(Transform checkingObject, Transform target, float maxAngle, float maxRadius)
+    public bool InFOV(Transform checkingObject, Transform target, float maxAngle, float maxRadius)
     {
         Collider[] overlaps = new Collider[10];
         int count = Physics.OverlapSphereNonAlloc(checkingObject.position, maxRadius, overlaps);
@@ -72,7 +71,7 @@ public class FOVDetection : MonoBehaviour
 
     private void Update()
     {
-        isInFov = InFOV(transform, player, maxAngle, maxRadius);
+        isInFov = InFOV(this.transform, player, maxAngle, maxRadius);
         if (isInFov)
         {
             playerLastKnownPos = player.position;

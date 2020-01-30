@@ -11,10 +11,10 @@ public class IdleBehaviour : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (FOVDetection.isInFov)
-        {
-            animator.SetBool("isPatrolling", true);
-        }
+       // if (FOVDetection.isInFov)
+        //{
+        //    animator.SetBool("isPatrolling", true);
+        //}
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

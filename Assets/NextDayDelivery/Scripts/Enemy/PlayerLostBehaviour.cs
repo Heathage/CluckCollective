@@ -16,7 +16,7 @@ public class PlayerLostBehaviour : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Vector3.Distance(animator.transform.position, FOVDetection.playerLastKnownPos) > 0.2f)
+        /**if (Vector3.Distance(animator.transform.position, FOVDetection.playerLastKnownPos) > 0.2f)
         {
             animator.transform.position = Vector3.MoveTowards(animator.transform.position, FOVDetection.playerLastKnownPos, speed * Time.deltaTime);
             Vector3 targetDirection = FOVDetection.playerLastKnownPos - animator.transform.position;
@@ -37,13 +37,13 @@ public class PlayerLostBehaviour : StateMachineBehaviour
             else
             {
                 animator.transform.Rotate(Vector3.up * angularSpeed * Time.deltaTime);
-                if (FOVDetection.isInFov)
-                {
-                    animator.SetBool("isPlayerLost", false);
-                }
+                //if (FOVDetection.isInFov)
+                //{
+                //    animator.SetBool("isPlayerLost", false);
+                //}
                 searchTime -= Time.deltaTime;
             }
-        }
+        }**/
         
 
         
