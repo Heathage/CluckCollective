@@ -69,6 +69,7 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(patrolPoints[currentPatrolPoint].transform.position);
         if(Vector3.Distance(this.transform.position, patrolPoints[currentPatrolPoint].transform.position) < 0.6f)
         {
+            Debug.Log("Running");
             currentPatrolPoint++;
             if (currentPatrolPoint == patrolPoints.Length)
             {
@@ -99,7 +100,7 @@ public class EnemyAI : MonoBehaviour
     {
         
 
-        if (Vector3.Distance(this.transform.position, fOVDetection.playerLastKnownPos) > 0.2f)
+        if (Vector3.Distance(this.transform.position, fOVDetection.playerLastKnownPos) > 0.5f)
         {
             agent.SetDestination(fOVDetection.playerLastKnownPos);
             Vector3 targetDirection = fOVDetection.playerLastKnownPos - this.transform.position;
