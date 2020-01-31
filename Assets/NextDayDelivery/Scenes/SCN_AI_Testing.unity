@@ -225,6 +225,14 @@ MonoBehaviour:
   searchTime: 0
   playerLostAngularSpeed: 80
   agent: {fileID: 388875112}
+  patrolPoints:
+  - {fileID: 690728165}
+  - {fileID: 2132644010}
+  - {fileID: 588278003}
+  - {fileID: 1200075737}
+  - {fileID: 1012901252}
+  - {fileID: 1819173167}
+  currentPatrolPoint: 0
   startingPos: {x: 0, y: 0, z: 0}
   state: 0
 --- !u!114 &388875111

@@ -10,6 +10,8 @@ public class EnemyAI : MonoBehaviour
     public float searchTime;
     public float playerLostAngularSpeed;
     public NavMeshAgent agent;
+    public GameObject[] patrolPoints;
+    public int currentPatrolPoint;
 
     private FOVDetection fOVDetection;
     [SerializeField]
@@ -41,7 +43,7 @@ public class EnemyAI : MonoBehaviour
         {
             default:
             case State.Patrol:
-                ResetPosition();
+                Patrol();
                 PlayerInSight();
                 break;
             case State.ChaseTarget:
@@ -59,6 +61,20 @@ public class EnemyAI : MonoBehaviour
         if (fOVDetection.isInFov)
         {
             state = State.ChaseTarget;
+        }
+    }
+
+    private void Patrol()
+    {
+        agent.SetDestination(patrolPoints[currentPatrolPoint].transform.position);
+        if(Vector3.Distance(this.transform.position, patrolPoints[currentPatrolPoint].transform.position) < 0.6f)
+        {
+            currentPatrolPoint++;
+            if (currentPatrolPoint == patrolPoints.Length)
+            {
+                currentPatrolPoint = 0;
+            }
+            agent.SetDestination(patrolPoints[currentPatrolPoint].transform.position);
         }
     }
 
