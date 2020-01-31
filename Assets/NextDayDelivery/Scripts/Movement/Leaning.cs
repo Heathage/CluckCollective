@@ -22,6 +22,8 @@ public class Leaning : MonoBehaviour
         leanLeftDistance = leanDistance * -1;
         leanRightAngle = leanAngle * -1;
     }
+
+
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftControl))
@@ -29,31 +31,31 @@ public class Leaning : MonoBehaviour
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, 0, 0), leanSpeed);
         }
 
-        else if (Input.GetKeyUp(KeyCode.LeftControl))
+        if (Input.GetKeyUp(KeyCode.LeftControl))
         {
-            transform.localPosition = new Vector3(0, camHeight, 0);
+        transform.localPosition = new Vector3(0, camHeight, 0);
 
         }
 
-        if (Input.GetKey("e"))
-        {
-            transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanRightAngle, 100f), leanSpeed * Time.deltaTime);
-            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(leanRightDistance, camHeight, 0), leanSpeed);
-        }
+        //    if (Input.GetKey("e"))
+        //    {
+        //        transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanRightAngle, 100f), leanSpeed * Time.deltaTime);
+        //        transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(leanRightDistance, camHeight, 0), leanSpeed);
+        //    }
 
-        else if (Input.GetKeyUp("e"))
-        {
-            transform.localPosition = new Vector3(0, camHeight, 0);
-        }
-        else if (Input.GetKey("q"))
-        {
-            transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanLeftAngle, 0f), leanSpeed * Time.deltaTime);
-            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(leanLeftDistance, camHeight, 0), leanSpeed);
-        }
-        else if (Input.GetKeyUp("q"))
-        {
-            transform.localPosition = new Vector3(0, camHeight, 0);
-        }
-        
+        //    else if (Input.GetKeyUp("e"))
+        //    {
+        //        transform.localPosition = new Vector3(0, camHeight, 0);
+        //    }
+        //    else if (Input.GetKey("q"))
+        //    {
+        //        transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanLeftAngle, 0f), leanSpeed * Time.deltaTime);
+        //        transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(leanLeftDistance, camHeight, 0), leanSpeed);
+        //    }
+        //    else if (Input.GetKeyUp("q"))
+        //    {
+        //        transform.localPosition = new Vector3(0, camHeight, 0);
+        //    }
+
     }
 }
