@@ -4,6 +4,8 @@ public class Crouching : MonoBehaviour
 {
     private CharacterController CharacterController;
 
+    public Leaning camHeight;
+
     public float crouching = 0f;
     public float crouchCam = 0f;
 
@@ -15,8 +17,12 @@ public class Crouching : MonoBehaviour
     public bool crouched = false;
     public bool crouchBlocked = false;
 
+    public GameObject Camera;
+
     void Start()
     {
+        crouched = false;
+        crouchBlocked = false;
         CharacterController = GetComponent<CharacterController>();
     }
 
@@ -25,11 +31,13 @@ public class Crouching : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl) || (crouchBlocked == true))
         {
             crouch();
+            //lowerCamera();
         }
 
         else if ((crouchBlocked == false) && (crouched == false))
         {
             unCrouch();
+            //raiseCamera();
         }
 
         else if (Input.GetKeyUp(KeyCode.LeftControl))
@@ -40,6 +48,7 @@ public class Crouching : MonoBehaviour
         else if (crouchBlocked == false)
         {
             unCrouch();
+            //raiseCamera();
         }
 
         crouchBlocked = IsCeilingAbove(1.5f);
@@ -50,6 +59,9 @@ public class Crouching : MonoBehaviour
         crouched = true;
         CharacterController.center = new Vector3(0, -1, 0);
         CharacterController.height = crouching;
+        //camHeight.currentHeight = 0f;
+        //Camera.transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, camHeight.currentHeight, 0), camHeight.leanSpeed);
+
     }
 
     private void unCrouch()
@@ -65,24 +77,5 @@ public class Crouching : MonoBehaviour
         return Physics.Raycast(transform.position, transform.up, distance);
     }
 
-    public void CrouchBlock()
-    {
-        crouchBlocked = true;
-    }
 
-    public void NotCrouchBlock()
-    {
-        crouchBlocked = false;
-    }
-
-        //    if (Input.GetKey(KeyCode.LeftControl))
-        //{
-        //    transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, 0, 0), leanSpeed);
-        //}
-
-        //if (Input.GetKeyUp(KeyCode.LeftControl))
-        //{
-        //transform.localPosition = new Vector3(0, camHeight, 0);
-
-        //}
 }
