@@ -7,10 +7,14 @@ public class Movement : MonoBehaviour
     public CharacterController controller;
 
     float speed = 0f;
-    public float walkSpeed = 0f;
-    public float crouchSpeed = 0f;
-    public float runSpeed = 0f;
-    public float gravity = 0f;
+    [SerializeField]
+    private float walkSpeed = 0f;
+    [SerializeField]
+    private float crouchSpeed = 0f;
+    [SerializeField]
+    private float runSpeed = 0f;
+    [SerializeField]
+    private float gravity = 0f;
 
     public Transform groundCheck;
     public float groundDistance = 0f;

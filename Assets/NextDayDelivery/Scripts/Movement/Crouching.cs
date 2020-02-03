@@ -24,15 +24,12 @@ public class Crouching : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftControl) || (crouchBlocked == true))
         {
-            crouched = true;
-            CharacterController.center = new Vector3(0, -1, 0);
-            CharacterController.height = crouching;
+            crouch();
         }
 
         else if ((crouchBlocked == false) && (crouched == false))
         {
-            CharacterController.center = new Vector3(0, 0, 0);
-            CharacterController.height = standing;
+            unCrouch();
         }
 
         else if (Input.GetKeyUp(KeyCode.LeftControl))
@@ -42,12 +39,24 @@ public class Crouching : MonoBehaviour
 
         else if (crouchBlocked == false)
         {
-            crouched = false;
-            CharacterController.center = new Vector3(0, 0, 0);
-            CharacterController.height = standing;
+            unCrouch();
         }
 
         crouchBlocked = IsCeilingAbove(1.5f);
+    }
+
+    private void crouch()
+    {
+        crouched = true;
+        CharacterController.center = new Vector3(0, -1, 0);
+        CharacterController.height = crouching;
+    }
+
+    private void unCrouch()
+    {
+        crouched = false;
+        CharacterController.center = new Vector3(0, 0, 0);
+        CharacterController.height = standing;
     }
 
     private bool IsCeilingAbove(float distance)
@@ -65,4 +74,15 @@ public class Crouching : MonoBehaviour
     {
         crouchBlocked = false;
     }
+
+        //    if (Input.GetKey(KeyCode.LeftControl))
+        //{
+        //    transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, 0, 0), leanSpeed);
+        //}
+
+        //if (Input.GetKeyUp(KeyCode.LeftControl))
+        //{
+        //transform.localPosition = new Vector3(0, camHeight, 0);
+
+        //}
 }
