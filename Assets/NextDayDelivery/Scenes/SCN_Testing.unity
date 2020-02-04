@@ -238,6 +238,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c5c303a02a7b04aade6ba25e894cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &61511828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61511823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b1034a3a4dcbf4abd4d2c04e31ea15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushMask:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &220052207 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7467882480573070991, guid: 24c62c118cfb02b45b1f38b147c380a8,
@@ -39202,7 +39217,6 @@ GameObject:
   - component: {fileID: 1379982461}
   - component: {fileID: 1379982460}
   - component: {fileID: 1379982459}
-  - component: {fileID: 1379982463}
   - component: {fileID: 1379982458}
   - component: {fileID: 1379982462}
   m_Layer: 11
@@ -39298,20 +39312,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1379982463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379982457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43b1034a3a4dcbf4abd4d2c04e31ea15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &1455522816
 Mesh:
   m_ObjectHideFlags: 0

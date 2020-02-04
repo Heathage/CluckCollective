@@ -4,8 +4,23 @@ using UnityEngine;
 
 public class PushingObjects : MonoBehaviour
 {
-    private void OnMouseDown()
+    public LayerMask pushMask;
+
+    void Update()
     {
-        Debug.Log("Hello");
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            PushObject();
+        }
+        Debug.DrawRay(transform.position, transform.forward * 2f, Color.red);
+    }
+    void PushObject()
+    {
+        RaycastHit pushable;
+
+        if (Physics.Raycast(transform.position, transform.forward, out pushable, 2f, pushMask))
+        {
+            pushable.collider.gameObject.GetComponent<Rigidbody>().AddForce((pushable.transform.position - this.transform.position).normalized * 15, ForceMode.Impulse);
+        }
     }
 }
