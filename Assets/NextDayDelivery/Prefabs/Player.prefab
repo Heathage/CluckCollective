@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 8617947987753908938}
   - component: {fileID: 5822330071002043643}
   - component: {fileID: 4634441845534138855}
+  - component: {fileID: 5491994724855935643}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -118,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c5c303a02a7b04aade6ba25e894cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camHeight: {fileID: 0}
   crouching: 0.5
   crouchCam: 0
   crouchSpeed: 0
@@ -125,7 +127,24 @@ MonoBehaviour:
   standCam: 0
   crouched: 0
   crouchBlocked: 0
-  crouchKey: 99
+  Camera: {fileID: 0}
+--- !u!114 &5491994724855935643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2701806583949503306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a597598baa7e1d54d92a2e4232aa2bf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 600
+  tempParent: {fileID: 0}
+  pickMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &7467882480573070991
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +245,9 @@ MonoBehaviour:
   leanDistance: 1
   leanAngle: 30
   leanSpeed: 0.1
+  camHeight: 1.4
+  currentHeight: 0
+  crouching: {fileID: 0}
 --- !u!114 &6748072621392423434
 MonoBehaviour:
   m_ObjectHideFlags: 0

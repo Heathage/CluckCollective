@@ -12,7 +12,7 @@ public class PushingObjects : MonoBehaviour
         {
             PushObject();
         }
-        Debug.DrawRay(transform.position, transform.forward * 2f, Color.red);
+        Debug.DrawRay(transform.position, transform.forward * 2f, Color.yellow);
     }
     void PushObject()
     {
