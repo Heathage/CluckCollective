@@ -220,10 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c3c8f42c5c3674e9928abc3ff5fcba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1166549617}
-  angularSpeed: 3
-  speed: 3
-  searchTime: 0
+  player: {fileID: 627715862}
+  continueToFollowTime: 0
+  lostSearchTime: 0
   playerLostAngularSpeed: 80
   agent: {fileID: 388875112}
   patrolPoints:
@@ -234,7 +233,6 @@ MonoBehaviour:
   - {fileID: 1012901252}
   - {fileID: 1819173167}
   currentPatrolPoint: 0
-  startingPos: {x: 0, y: 0, z: 0}
   state: 0
 --- !u!114 &388875111
 MonoBehaviour:
@@ -262,11 +260,11 @@ NavMeshAgent:
   m_GameObject: {fileID: 388875103}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 220
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -319,6 +317,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDrawRadius: 1
+--- !u!1 &627715862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2701806583949503306, guid: 24c62c118cfb02b45b1f38b147c380a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2032793429}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &690728165
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +787,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh36228
+  m_Name: pb_Mesh18452
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -980,7 +984,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.1
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 4da611de2aa38a949964b4411f5efbc3, type: 2}
 --- !u!4 &1701851983

@@ -4,17 +4,22 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
 
-    public Transform player;
-    public float angularSpeed;
-    public float speed;
-    public float searchTime;
+    public GameObject player;
+    [Header("Player Lost")]
+    [SerializeField]
+    private float continueToFollowTime;
+    [SerializeField]
+    private float lostSearchTime;
+    [SerializeField]
     public float playerLostAngularSpeed;
+    [Header ("Patrol")]
     public NavMeshAgent agent;
     public GameObject[] patrolPoints;
-    public int currentPatrolPoint;
+    [SerializeField]
+    private int currentPatrolPoint;
+
 
     private FOVDetection fOVDetection;
-    [SerializeField]
     private Vector3 startingPos;
 
     [SerializeField]
@@ -57,7 +62,8 @@ public class EnemyAI : MonoBehaviour
 
     private void PlayerInSight()
     {
-        searchTime = 5f;
+        lostSearchTime = 5f;
+        continueToFollowTime = 5f;
         if (fOVDetection.isInFov)
         {
             state = State.ChaseTarget;
@@ -83,16 +89,20 @@ public class EnemyAI : MonoBehaviour
     {
         if (fOVDetection.isInFov)
         {
-            //this.transform.position = Vector3.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-            agent.SetDestination(player.position);
-            Vector3 targetDirection = player.position - this.transform.position;
-            float singleStep = angularSpeed * Time.deltaTime;
-            Vector3 newDirection = Vector3.RotateTowards(this.transform.forward, targetDirection, singleStep, 0.0f);
-            this.transform.rotation = Quaternion.LookRotation(newDirection);
+            agent.SetDestination(player.transform.position);
         }
         else if (!fOVDetection.isInFov)
         {
-            state = State.TargetLost;
+
+            if (continueToFollowTime <= 0)
+            {
+                state = State.TargetLost;
+            }
+            else
+            {
+                agent.SetDestination(player.transform.position);
+                continueToFollowTime -= Time.deltaTime;
+            }
         }
     }
 
@@ -104,37 +114,21 @@ public class EnemyAI : MonoBehaviour
         {
             agent.SetDestination(fOVDetection.playerLastKnownPos);
             Vector3 targetDirection = fOVDetection.playerLastKnownPos - this.transform.position;
-            float singleStep = angularSpeed * Time.deltaTime;
+            float singleStep = playerLostAngularSpeed * Time.deltaTime;
             Vector3 newDirection = Vector3.RotateTowards(this.transform.forward, targetDirection, singleStep, 0.0f).normalized;
             this.transform.rotation = Quaternion.LookRotation(newDirection);
         }
         else
         {
-            if (searchTime <= 0)
+            if (lostSearchTime <= 0)
             {
                 state = State.Patrol;
             }
             else
             {
                 this.transform.Rotate(Vector3.up * playerLostAngularSpeed * Time.deltaTime);
-                searchTime -= Time.deltaTime;
+                lostSearchTime -= Time.deltaTime;
             }
-        }
-    }
-
-    private void ResetPosition()
-    {
-        if (Vector3.Distance(this.transform.position, startingPos) > 0.2f)
-        {
-            agent.SetDestination(startingPos);
-            Vector3 targetDirection = startingPos - this.transform.position;
-            float singleStep = angularSpeed * Time.deltaTime;
-            Vector3 newDirection = Vector3.RotateTowards(this.transform.forward, targetDirection, singleStep, 0.0f).normalized;
-            this.transform.rotation = Quaternion.LookRotation(newDirection);
-        }
-        else
-        {
-            PlayerInSight(); 
         }
     }
 }
