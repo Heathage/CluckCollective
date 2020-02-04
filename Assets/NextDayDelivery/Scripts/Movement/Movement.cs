@@ -20,6 +20,8 @@ public class Movement : MonoBehaviour
     public float groundDistance = 0f;
     public LayerMask groundMask;
 
+    public LayerMask pushMask;
+
     Vector3 velocity;
     public bool isGrounded;
 
@@ -39,6 +41,14 @@ public class Movement : MonoBehaviour
         {
             speed = walkSpeed;
         }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+
+            PushObject();
+        }
+
+        Debug.DrawRay(transform.position, transform.forward * 2f, Color.red);
 
         //Checks to see if the player has hit the Ground layer while falling.
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -63,5 +73,15 @@ public class Movement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void PushObject()
+    {
+        RaycastHit pushable;
+
+        if (Physics.Raycast(transform.position, transform.forward, out pushable, 2f, pushMask))
+        {
+            pushable.collider.gameObject.GetComponent<Rigidbody>().AddForce((pushable.transform.position - this.transform.position).normalized * 15, ForceMode.Impulse);
+        }
     }
 }
