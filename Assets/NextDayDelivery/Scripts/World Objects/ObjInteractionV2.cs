@@ -34,7 +34,7 @@ public class ObjInteractionV2 : MonoBehaviour
         }
         else
         {
-            DropObject();
+            //DropObject();
         }
         Debug.DrawRay(transform.position, transform.forward * 1.5f, Color.blue);
     }
@@ -46,13 +46,13 @@ public class ObjInteractionV2 : MonoBehaviour
         pickUpable.collider.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
-    private void DropObject()
-    {
-        objectPos = pickUpable.collider.transform.position;
-        pickUpable.collider.transform.SetParent(null);
-        pickUpable.collider.GetComponent<Rigidbody>().useGravity = true;
-        pickUpable.transform.position = objectPos;
-    }
+    //private void DropObject()
+    //{
+    //    objectPos = pickUpable.collider.transform.position;
+    //    pickUpable.collider.transform.SetParent(null);
+    //    pickUpable.collider.GetComponent<Rigidbody>().useGravity = true;
+    //    pickUpable.transform.position = objectPos;
+    //}
 
     private void OnMouseUpAsButton()
     {
