@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -118,7 +118,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17926
+  m_Name: pb_Mesh19090
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1758,7 +1758,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18116
+  m_Name: pb_Mesh19278
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1918,7 +1918,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18000
+  m_Name: pb_Mesh19164
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -8864,7 +8864,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18160
+  m_Name: pb_Mesh19322
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -9162,7 +9162,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18040
+  m_Name: pb_Mesh19204
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -15208,7 +15208,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18206
+  m_Name: pb_Mesh19368
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -17811,7 +17811,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18098
+  m_Name: pb_Mesh19262
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -37442,10 +37442,8 @@ MonoBehaviour:
   assetGuid: 
   m_IsSelectable: 1
   m_SelectedFaces: 
-  m_SelectedEdges:
-  - a: 1623
-    b: 1626
-  m_SelectedVertices: 570600005a060000
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!23 &1508862035
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38132,7 +38130,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17958
+  m_Name: pb_Mesh19122
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -42190,7 +42188,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17862
+  m_Name: pb_Mesh19026
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -42800,17 +42798,17 @@ PrefabInstance:
     - target: {fileID: 2926880392480564104, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -31.5
       objectReference: {fileID: 0}
     - target: {fileID: 2926880392480564104, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2926880392480564104, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.12
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 2926880392480564104, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
@@ -42851,6 +42849,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926880392480564109, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: m_Height
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926880392480564107, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: gravity
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2926880392305377772, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: field of view
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24c62c118cfb02b45b1f38b147c380a8, type: 3}
