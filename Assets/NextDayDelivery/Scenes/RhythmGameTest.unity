@@ -351,6 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   note: {fileID: 4329771301649631132, guid: e8d4608e29004a84ea6017bddb9dcfcc, type: 3}
+  level: 1
 --- !u!4 &747593388
 Transform:
   m_ObjectHideFlags: 0
