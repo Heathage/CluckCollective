@@ -4,31 +4,27 @@ using UnityEngine;
 
 public class PushingObjectsV2 : MonoBehaviour
 {
-        void OnCollisionStay(Collision other)
+    void OnCollisionStay(Collision other)
+    {
+        if (Input.GetKey(KeyCode.Mouse0))
         {
-            if (Input.GetKey(KeyCode.Mouse0))
-            {
-                push();
-            }
-            else
-            {
-                noPush();
-            }
+            push();
         }
+        else
+        {
+            noPush();
+        }
+    }
 
     private void push()
     {
         Debug.Log("Sucess");
-        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None | RigidbodyConstraints.FreezeRotationY;
     }
 
     private void noPush()
     {
-        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX;
-        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
-        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
     }
 }
 
