@@ -2,7 +2,7 @@
 
 public class FOVDetection : MonoBehaviour
 {
-    public Transform player;
+    public GameObject player;
     public float maxAngle;
     public float maxRadius;
     public Vector3 playerLastKnownPos;
@@ -28,7 +28,7 @@ public class FOVDetection : MonoBehaviour
         {
             Gizmos.color = Color.green;
         }
-        Gizmos.DrawRay(transform.position, (player.position - transform.position).normalized * maxRadius);
+        Gizmos.DrawRay(transform.position, (player.transform.position - transform.position).normalized * maxRadius);
 
         Gizmos.color = Color.black;
         Gizmos.DrawRay(transform.position, transform.forward * maxRadius);
@@ -71,10 +71,10 @@ public class FOVDetection : MonoBehaviour
 
     private void Update()
     {
-        isInFov = InFOV(this.transform, player, maxAngle, maxRadius);
+        isInFov = InFOV(this.transform, player.transform, maxAngle, maxRadius);
         if (isInFov)
         {
-            playerLastKnownPos = player.position;
+            playerLastKnownPos = player.transform.position;
         }
 
     }

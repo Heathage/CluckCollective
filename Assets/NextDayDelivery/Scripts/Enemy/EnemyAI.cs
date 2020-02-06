@@ -62,8 +62,8 @@ public class EnemyAI : MonoBehaviour
 
     private void PlayerInSight()
     {
-        lostSearchTime = 5f;
-        continueToFollowTime = 5f;
+        //lostSearchTime = 5f;
+        //continueToFollowTime = 5f;
         if (fOVDetection.isInFov)
         {
             state = State.ChaseTarget;
@@ -90,6 +90,8 @@ public class EnemyAI : MonoBehaviour
         if (fOVDetection.isInFov)
         {
             agent.SetDestination(player.transform.position);
+            continueToFollowTime = 5f;
+            lostSearchTime = 5f;
         }
         else if (!fOVDetection.isInFov)
         {
