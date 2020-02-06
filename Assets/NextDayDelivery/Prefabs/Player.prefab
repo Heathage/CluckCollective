@@ -129,7 +129,6 @@ GameObject:
   - component: {fileID: 2926880392480564109}
   - component: {fileID: 2926880392480564107}
   - component: {fileID: 2926880392480564105}
-  - component: {fileID: 2926880392480564106}
   - component: {fileID: 2926880392480564108}
   m_Layer: 0
   m_Name: Player
@@ -216,24 +215,6 @@ MonoBehaviour:
   crouched: 0
   crouchBlocked: 0
   Camera: {fileID: 2926880392305377783}
---- !u!114 &2926880392480564106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2926880392480564119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a597598baa7e1d54d92a2e4232aa2bf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  throwForce: 600
-  tempParent: {fileID: 2926880392480564119}
-  pickedUp: 0
-  pickMask:
-    serializedVersion: 2
-    m_Bits: 4096
 --- !u!114 &2926880392480564108
 MonoBehaviour:
   m_ObjectHideFlags: 0

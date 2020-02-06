@@ -8,7 +8,7 @@ public class PushingObjects : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             PushObject();
         }
@@ -20,7 +20,7 @@ public class PushingObjects : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.forward, out pushable, 2f, pushMask))
         {
-            pushable.collider.gameObject.GetComponent<Rigidbody>().AddForce((pushable.transform.position - this.transform.position).normalized * 15, ForceMode.Impulse);
+            pushable.collider.gameObject.GetComponent<Rigidbody>().AddForce((pushable.transform.position - this.transform.position).normalized * 15, ForceMode.Force);
         }
     }
 }

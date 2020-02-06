@@ -1,27 +1,25 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Crouching : MonoBehaviour
+public class CrouchingV2 : MonoBehaviour
 {
-    private CharacterController CharacterController;
+    private Rigidbody rb;
 
     public float crouching = 0f;
     public float crouchCam = 0f;
 
     public float crouchSpeed = 0.1f;
 
-    public float standing = 0f;
-    public float standCam = 0f; 
-
     public bool crouched = false;
     public bool crouchBlocked = false;
 
     public GameObject Camera;
 
-    void Start()
+    void start()
     {
         crouched = false;
         crouchBlocked = false;
-        CharacterController = GetComponent<CharacterController>();
     }
 
     void Update()
@@ -55,18 +53,14 @@ public class Crouching : MonoBehaviour
     private void crouch()
     {
         crouched = true;
-        CharacterController.center = new Vector3(0, -1, 0);
-        CharacterController.height = crouching;
-        //camHeight.currentHeight = 0f;
-        //Camera.transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, camHeight.currentHeight, 0), camHeight.leanSpeed);
+        gameObject.transform.localScale = new Vector3(0.7f, 0.3f, 0.7f);
 
     }
 
     private void unCrouch()
     {
         crouched = false;
-        CharacterController.center = new Vector3(0, 0, 0);
-        CharacterController.height = standing;
+        gameObject.transform.localScale = new Vector3(0.7f, 0.9f, 0.7f);
     }
 
     private bool IsCeilingAbove(float distance)
