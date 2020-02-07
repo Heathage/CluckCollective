@@ -53,14 +53,14 @@ public class CrouchingV2 : MonoBehaviour
     private void crouch()
     {
         crouched = true;
-        gameObject.transform.localScale = new Vector3(0.7f, 0.3f, 0.7f);
+        gameObject.GetComponent<CapsuleCollider>().height = 0.9f;
 
     }
 
     private void unCrouch()
     {
         crouched = false;
-        gameObject.transform.localScale = new Vector3(0.7f, 0.9f, 0.7f);
+        gameObject.GetComponent<CapsuleCollider>().height = 1.8f;
     }
 
     private bool IsCeilingAbove(float distance)

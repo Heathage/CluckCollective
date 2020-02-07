@@ -34,7 +34,8 @@ public class ObjInteraction : MonoBehaviour
         {
             item.GetComponent<Rigidbody>().velocity = Vector3.zero;
             item.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            item.transform.SetParent(tempParent.transform);
+            item.transform.SetParent(tempParent.transform,true);
+  
 
             //Allows the player to throw the item, only when it is held.
             if (Input.GetMouseButtonDown(1))
