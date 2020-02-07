@@ -147,7 +147,7 @@ using UnityEngine;
         {
             m_RigidBody = GetComponent<Rigidbody>();
             m_Capsule = GetComponent<CapsuleCollider>();
-            mouseLook.Init (transform, cam.transform);
+            //mouseLook.Init (transform, cam.transform);
         }
 
 
@@ -262,7 +262,7 @@ using UnityEngine;
             // get the rotation before it's changed
             float oldYRotation = transform.eulerAngles.y;
 
-            mouseLook.LookRotation (transform, cam.transform);
+            //mouseLook.LookRotation (transform, cam.transform);
 
             if (m_IsGrounded || advancedSettings.airControl)
             {
