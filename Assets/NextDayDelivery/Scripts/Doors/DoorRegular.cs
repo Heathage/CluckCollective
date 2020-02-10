@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoorRegular : MonoBehaviour
 {
     Animator anim;
+    bool Opening;
     // Start is called before the first frame update
     void Start()
     {
