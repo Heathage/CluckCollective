@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{34f9c6cf-8c8e-4cef-8b50-04624c5847ec}">
+		<property name="assetPath">
+			<value>Percussion Lows.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>146.66666666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2d2041e7-a00e-4141-8d69-6f2a7b01e683}</destination>
+		</relationship>
+	</object>
+</objects>
