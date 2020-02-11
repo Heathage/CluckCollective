@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 940406333691870055}
   - component: {fileID: 8893115819612269662}
   - component: {fileID: 6692103981994111558}
+  - component: {fileID: 1939355985475937064}
   - component: {fileID: 4569286617998834007}
   m_Layer: 0
   m_Name: RegularDoor
@@ -106,6 +107,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2.5}
   m_Center: {x: -0.74999994, y: 0, z: 1.2500002}
+--- !u!95 &1939355985475937064
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940406333689669031}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce13b50791a41104ebf0b88a748306ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4569286617998834007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,8 +138,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cb2cf5907b85cf4a96135fd77c7b1e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Point1: 0
-  Point2: 0
-  UsePosInsteadOfRot: 0
-  Locked: 0
-  Speed: 1

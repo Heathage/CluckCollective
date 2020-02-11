@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 8868316516796600481}
   - component: {fileID: 8868316516795306113}
   - component: {fileID: 8868316516794307137}
-  - component: {fileID: 6170414070451510227}
-  - component: {fileID: 3840392227359322060}
   m_Layer: 0
   m_Name: ShutterDoor
   m_TagString: Untagged
@@ -79,34 +77,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6170414070451510227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8868316516796566657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb2cf5907b85cf4a96135fd77c7b1e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: 0
-  Point1: 0
-  Point2: 0
-  UsePosInsteadOfRot: 1
-  Locked: 0
-  Speed: 0.01
---- !u!65 &3840392227359322060
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8868316516796566657}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 3.0000007}
-  m_Center: {x: 0, y: 0, z: 1.5000004}
