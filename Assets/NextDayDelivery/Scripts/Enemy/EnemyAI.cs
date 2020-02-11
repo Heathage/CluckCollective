@@ -3,24 +3,24 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-
-    public GameObject player;
+    [SerializeField]
+    private GameObject player;
     [Header("Player Lost")]
     [SerializeField]
     private float continueToFollowTime;
     [SerializeField]
     private float lostSearchTime;
-    [SerializeField]
-    public float playerLostAngularSpeed;
+    [Range (45, 180)][SerializeField]
+    private float playerLostAngularSpeed;
     [Header ("Patrol")]
-    public NavMeshAgent agent;
-    public GameObject[] patrolPoints;
+    private NavMeshAgent agent;
+    [Tooltip ("when the ground is at y = 0 put the patrol point on y = 2. This makes sure that the AI can see the patrol point and detect it.")][SerializeField]
+    private GameObject[] patrolPoints;
     [SerializeField]
     private int currentPatrolPoint;
 
 
     private FOVDetection fOVDetection;
-    private Vector3 startingPos;
 
     [SerializeField]
     private State state;
@@ -33,12 +33,12 @@ public class EnemyAI : MonoBehaviour
 
     private void Awake()
     {
-        fOVDetection = GetComponent<FOVDetection>();
+        agent = this.GetComponent<NavMeshAgent>();
+        fOVDetection = this.GetComponent<FOVDetection>();
     }
 
     private void Start()
     {
-        startingPos = this.transform.position;
         state = State.Patrol;
     }
 
@@ -62,8 +62,6 @@ public class EnemyAI : MonoBehaviour
 
     private void PlayerInSight()
     {
-        //lostSearchTime = 5f;
-        //continueToFollowTime = 5f;
         if (fOVDetection.isInFov)
         {
             state = State.ChaseTarget;

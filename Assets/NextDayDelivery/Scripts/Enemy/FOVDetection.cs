@@ -2,9 +2,12 @@
 
 public class FOVDetection : MonoBehaviour
 {
-    public GameObject player;
-    public float maxAngle;
-    public float maxRadius;
+    [SerializeField]
+    private GameObject player;
+    [Range (5, 90)][SerializeField]
+    private float maxAngle;
+    [Range (5, 30)][SerializeField]
+    private float maxRadius;
     public Vector3 playerLastKnownPos;
     public bool isInFov = false;
 
