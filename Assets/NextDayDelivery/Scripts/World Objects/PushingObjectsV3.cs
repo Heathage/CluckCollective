@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PushingObjectsV3 : MonoBehaviour
 {
-    [SerializeField]
-    private float pushPower = 2.0f;
+    public float pushPower = 1f;
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
