@@ -5,8 +5,6 @@ public class Crouching : MonoBehaviour
     private CharacterController CharacterController;
 
     public float crouching = 0f;
-    public float crouchCam = 0f;
-
     public float crouchSpeed = 0.1f;
 
     public float standing = 0f;
@@ -29,13 +27,11 @@ public class Crouching : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl) || (crouchBlocked == true))
         {
             crouch();
-            //lowerCamera();
         }
 
         else if ((crouchBlocked == false) && (crouched == false))
         {
             unCrouch();
-            //raiseCamera();
         }
 
         else if (Input.GetKeyUp(KeyCode.LeftControl))
@@ -46,7 +42,6 @@ public class Crouching : MonoBehaviour
         else if (crouchBlocked == false)
         {
             unCrouch();
-            //raiseCamera();
         }
 
         crouchBlocked = IsCeilingAbove(1.5f);
@@ -55,7 +50,7 @@ public class Crouching : MonoBehaviour
     private void crouch()
     {
         crouched = true;
-        CharacterController.center = new Vector3(0, -1, 0);
+        CharacterController.center = new Vector3(0, 0, 0);
         CharacterController.height = crouching;
         //camHeight.currentHeight = 0f;
         //Camera.transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, camHeight.currentHeight, 0), camHeight.leanSpeed);
