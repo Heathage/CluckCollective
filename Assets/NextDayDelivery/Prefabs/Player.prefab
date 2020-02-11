@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 2926880392480564109}
   - component: {fileID: 2926880392480564107}
   - component: {fileID: 2926880392480564105}
-  - component: {fileID: 2926880392480564108}
+  - component: {fileID: 8189623017256981533}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -206,7 +206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c5c303a02a7b04aade6ba25e894cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camHeight: {fileID: 2926880392305377770}
   crouching: 0.8
   crouchCam: 1
   crouchSpeed: 0.1
@@ -215,7 +214,7 @@ MonoBehaviour:
   crouched: 0
   crouchBlocked: 0
   Camera: {fileID: 2926880392305377783}
---- !u!114 &2926880392480564108
+--- !u!114 &8189623017256981533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,12 +223,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2926880392480564119}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43b1034a3a4dcbf4abd4d2c04e31ea15, type: 3}
+  m_Script: {fileID: 11500000, guid: fabdf30978805fa44ab201eca2138c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushMask:
-    serializedVersion: 2
-    m_Bits: 2048
+  pushPower: 10
 --- !u!1 &2926880392679041191
 GameObject:
   m_ObjectHideFlags: 0

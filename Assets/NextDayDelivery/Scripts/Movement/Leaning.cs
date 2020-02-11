@@ -15,6 +15,8 @@ public class Leaning : MonoBehaviour
 
     [SerializeField]
     private float camHeight = 1.4f;
+    [SerializeField]
+    private float crouchCam = 0.5f;
     public float currentHeight;
 
     [SerializeField]
@@ -57,7 +59,7 @@ public class Leaning : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
-            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, 0, 0), leanSpeed);
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, crouchCam, 0), leanSpeed);
         }
 
         if (Input.GetKeyUp(KeyCode.LeftControl))
