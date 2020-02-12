@@ -39949,6 +39949,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4350381977502877067, guid: da944113f79e67c4184d8b07c658d8ed,
+        type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350381977502877067, guid: da944113f79e67c4184d8b07c658d8ed,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4350381977502877061, guid: da944113f79e67c4184d8b07c658d8ed,
         type: 3}
       propertyPath: walkSpeed
@@ -39963,16 +39973,6 @@ PrefabInstance:
         type: 3}
       propertyPath: runSpeed
       value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4350381977502877067, guid: da944113f79e67c4184d8b07c658d8ed,
-        type: 3}
-      propertyPath: m_Drag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4350381977502877067, guid: da944113f79e67c4184d8b07c658d8ed,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da944113f79e67c4184d8b07c658d8ed, type: 3}

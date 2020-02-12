@@ -7,14 +7,19 @@ public class DoorRegular : MonoBehaviour
     Animator anim;
     bool Opening;
     public bool Locked;
+    public GameObject key;
     // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
     }
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject == key) {
+            Debug.Log("Unlocked!!!!");
+            Locked = false;
+        }
         if (Locked == false)
         {
             anim.SetBool("Open?", true);
