@@ -6,6 +6,7 @@ public class DoorRegular : MonoBehaviour
 {
     Animator anim;
     bool Opening;
+    public bool Locked;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,15 @@ public class DoorRegular : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        anim.SetBool("Open?", true);
+        if (Locked == false)
+        {
+            anim.SetBool("Open?", true);
+        } else
+        {
+            anim.SetTrigger("Locked");
+            Debug.Log("locked!!!");
+        }
+        
     }
 
     void OnTriggerExit()
