@@ -297,9 +297,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2032793430}
+  enemy: {fileID: 0}
   continueToFollowTime: 0
   lostSearchTime: 0
   playerLostAngularSpeed: 180
+  agent: {fileID: 0}
   patrolPoints:
   - {fileID: 690728165}
   - {fileID: 2132644010}
@@ -483,6 +485,7 @@ GameObject:
   - component: {fileID: 643312607}
   - component: {fileID: 643312612}
   - component: {fileID: 643312613}
+  - component: {fileID: 643312614}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -609,6 +612,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24c72ca205a870c44aae74daa4b59cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sphereRadius: 50
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  origin: {x: 0, y: 0, z: 0}
+--- !u!208 &643312614
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643312606}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1, y: 1, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &690728165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,7 +1525,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20644
+  m_Name: pb_Mesh6334
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -18381,9 +18405,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2032793430}
+  enemy: {fileID: 0}
   continueToFollowTime: 0
   lostSearchTime: 0
   playerLostAngularSpeed: 180
+  agent: {fileID: 0}
   patrolPoints:
   - {fileID: 1214616120}
   - {fileID: 897614261}
@@ -19009,9 +19035,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2032793430}
+  enemy: {fileID: 0}
   continueToFollowTime: 0
   lostSearchTime: 0
   playerLostAngularSpeed: 180
+  agent: {fileID: 0}
   patrolPoints:
   - {fileID: 690728165}
   - {fileID: 2132644010}

@@ -5,6 +5,7 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField]
     private GameObject player;
+    public GameObject enemy;
     [Header("Player Lost")]
     [SerializeField]
     private float continueToFollowTime;
@@ -13,7 +14,7 @@ public class EnemyAI : MonoBehaviour
     [Range (45, 180)][SerializeField]
     private float playerLostAngularSpeed;
     [Header ("Patrol")]
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     [Tooltip ("when the ground is at y = 0 put the patrol point on y = 2. This makes sure that the AI can see the patrol point and detect it.")][SerializeField]
     private GameObject[] patrolPoints;
     [SerializeField]
@@ -23,18 +24,21 @@ public class EnemyAI : MonoBehaviour
     private FOVDetection fOVDetection;
 
     [SerializeField]
-    private State state;
-    private enum State
+    public State state;
+    public enum State
     {
         Patrol,
         ChaseTarget,
         TargetLost,
+        Sound,
     }
 
     private void Awake()
     {
         agent = this.GetComponent<NavMeshAgent>();
         fOVDetection = this.GetComponent<FOVDetection>();
+        enemy = this.gameObject;
+        
     }
 
     private void Start()
@@ -56,6 +60,8 @@ public class EnemyAI : MonoBehaviour
                 break;
             case State.TargetLost:
                 PlayerLost();
+                break;
+            case State.Sound:
                 break;
         }
     }
@@ -108,9 +114,10 @@ public class EnemyAI : MonoBehaviour
 
     private void PlayerLost()
     {
-        
 
-        if (Vector3.Distance(this.transform.position, fOVDetection.playerLastKnownPos) > 0.5f)
+        //fOVDetection.playerLastKnownPos.y = 2f;
+        lostSearchTime = 5f;
+        if (Vector3.Distance(this.transform.position, fOVDetection.playerLastKnownPos) > 3f)
         {
             agent.SetDestination(fOVDetection.playerLastKnownPos);
             Vector3 targetDirection = fOVDetection.playerLastKnownPos - this.transform.position;
@@ -131,4 +138,5 @@ public class EnemyAI : MonoBehaviour
             }
         }
     }
+
 }

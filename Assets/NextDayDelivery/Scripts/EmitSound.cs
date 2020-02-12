@@ -5,6 +5,12 @@ using UnityEngine;
 public class EmitSound : MonoBehaviour
 {
     private Rigidbody rb;
+    [Range (0, 50)]
+    [SerializeField]
+    private float sphereRadius;
+    public LayerMask layerMask;
+
+    public Vector3 origin;
     private Vector3 velocity;
     private void Awake()
     {
@@ -18,7 +24,35 @@ public class EmitSound : MonoBehaviour
     {
         if (velocity.y <= 1)
         {
-            Debug.Log("Sound");
+            origin = this.transform.position;
+            
+
+            Collider[] hits = Physics.OverlapSphere(origin, sphereRadius, layerMask, QueryTriggerInteraction.UseGlobal);
+            int i = 0;
+            while (i < hits.Length)
+            {
+                if (hits[i].gameObject.GetComponent<EnemyAI>() != null)
+                {
+                    
+                    EnemyAI enemy = hits[i].gameObject.GetComponent<EnemyAI>();
+                    FOVDetection fOVDetection = hits[i].gameObject.GetComponent<FOVDetection>();
+                    enemy.state = EnemyAI.State.Sound;
+                    if(Vector3.Distance(enemy.enemy.transform.position, origin) > 3f)
+                    {
+                        enemy.agent.SetDestination(origin);
+                        Debug.Log("Sound");
+                    }
+                    else
+                    {
+                        fOVDetection.playerLastKnownPos = origin;
+                        fOVDetection.playerLastKnownPos.y += 1;
+
+                        enemy.state = EnemyAI.State.TargetLost;
+                    }
+                    
+                }
+                i++;
+            }
         }
     }
 }
