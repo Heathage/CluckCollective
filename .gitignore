@@ -41,16 +41,12 @@ sysinfo.txt
 *.unitypackage
 
 # FMOD
-/Assets/FMODStudioCache.asset
-/Assets/FMODStudioCache.asset.meta
-fmod.log
+Assets/Plugins/FMOD/Resources/FMODStudioCashe.asset
+Assets/Plugins/FMOD/Resources/FMODStudioCashe.asset.meta
+Assets/StreamingAssets/**/*.bank
+Assets/StreamingAssets/**/*.bank.meta
 fmod_editor.log
 
-# FMOD studio (In folder FMOD)
-/FMOD/**.user
-/FMOD/**.unsaved
-/FMOD/**.cache
-/FMOD/**.restore
 
 # End of https://www.gitignore.io/api/unity
 /Logs
