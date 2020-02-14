@@ -40,6 +40,17 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+# FMOD
+/Assets/FMODStudioCache.asset
+/Assets/FMODStudioCache.asset.meta
+fmod.log
+fmod_editor.log
+
+# FMOD studio (In folder FMOD)
+/FMOD/**.user
+/FMOD/**.unsaved
+/FMOD/**.cache
+/FMOD/**.restore
 
 # End of https://www.gitignore.io/api/unity
 /Logs
