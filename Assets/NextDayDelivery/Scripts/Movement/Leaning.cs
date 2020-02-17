@@ -37,7 +37,7 @@ public class Leaning : MonoBehaviour
     {
         if (Input.GetKey("e"))
         {
-            transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanRightAngle, 100f), leanSpeed * Time.deltaTime);
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanRightAngle, 100f), leanSpeed * Time.deltaTime); //Lyra this is what you replace with animation script
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(leanRightDistance, currentHeight, 0), leanSpeed);
         }
 
@@ -48,7 +48,7 @@ public class Leaning : MonoBehaviour
 
         else if (Input.GetKey("q"))
         {
-            transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanLeftAngle, 0f), leanSpeed * Time.deltaTime);
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanLeftAngle, 0f), leanSpeed * Time.deltaTime); //Lyra this is what you replace with animation script
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(leanLeftDistance, currentHeight, 0), leanSpeed);
         }
 
