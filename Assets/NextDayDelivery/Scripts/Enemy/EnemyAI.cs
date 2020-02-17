@@ -5,7 +5,6 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField]
     private GameObject player;
-    public GameObject enemy;
     [Header("Player Lost")]
     [SerializeField]
     private float continueToFollowTime;
@@ -37,7 +36,6 @@ public class EnemyAI : MonoBehaviour
     {
         agent = this.GetComponent<NavMeshAgent>();
         fOVDetection = this.GetComponent<FOVDetection>();
-        enemy = this.gameObject;
         
     }
 

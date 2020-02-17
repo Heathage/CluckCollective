@@ -314,7 +314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2032793430}
-  enemy: {fileID: 0}
   continueToFollowTime: 0
   lostSearchTime: 0
   playerLostAngularSpeed: 180
@@ -18424,7 +18423,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2032793430}
-  enemy: {fileID: 0}
   continueToFollowTime: 0
   lostSearchTime: 0
   playerLostAngularSpeed: 180
@@ -19071,7 +19069,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2032793430}
-  enemy: {fileID: 0}
   continueToFollowTime: 0
   lostSearchTime: 0
   playerLostAngularSpeed: 180
