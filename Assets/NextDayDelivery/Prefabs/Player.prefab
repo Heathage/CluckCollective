@@ -101,6 +101,7 @@ MonoBehaviour:
   leanAngle: 30
   leanSpeed: 0.1
   camHeight: 1.4
+  crouchCam: 0.5
   currentHeight: 0
   crouching: {fileID: 2926880392480564105}
 --- !u!114 &2926880392305377769
@@ -184,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 2926880392480564109}
+  speed: 0
   walkSpeed: 8
   crouchSpeed: 4
   runSpeed: 12
@@ -207,7 +209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crouching: 0.8
-  crouchCam: 1
   crouchSpeed: 0.1
   standing: 3.4
   standCam: 1.4
@@ -226,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabdf30978805fa44ab201eca2138c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: {fileID: 2926880392480564107}
   pushPower: 10
 --- !u!1 &2926880392679041191
 GameObject:

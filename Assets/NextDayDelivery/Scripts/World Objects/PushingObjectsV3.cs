@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class PushingObjectsV3 : MonoBehaviour
 {
-    public float pushPower = 1f;
+    public Movement moveSpeed;
+
+    private float speed;
+
+    void Update()
+    {
+        speed = moveSpeed.speed; 
+    }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -20,6 +27,6 @@ public class PushingObjectsV3 : MonoBehaviour
 
         Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
-        body.velocity = pushDir * pushPower;
+        body.velocity = pushDir * speed;
     }
 }

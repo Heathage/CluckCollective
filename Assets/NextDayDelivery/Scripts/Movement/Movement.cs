@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
     public CharacterController controller;
 
-    float speed = 0f;
+    public float speed = 0f;
     [SerializeField]
     private float walkSpeed = 0f;
     [SerializeField]
