@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4614118358954126841}
   - component: {fileID: 4614118358953029433}
   - component: {fileID: 6792052141559405765}
+  - component: {fileID: 1470844712990616982}
   m_Layer: 0
   m_Name: BoxSmall
   m_TagString: Untagged
@@ -91,3 +92,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.26966232, y: 0.15492807, z: 0.36327457}
   m_Center: {x: 0, y: -0.000000007450581, z: 0}
+--- !u!208 &1470844712990616982
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4614118358955225595}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.32, y: 0.135, z: 0.32}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
