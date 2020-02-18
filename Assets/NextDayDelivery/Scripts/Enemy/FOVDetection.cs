@@ -2,12 +2,18 @@
 
 public class FOVDetection : MonoBehaviour
 {
+    [Tooltip("put the current player on the scence here")]
     [SerializeField]
     private GameObject player;
+    [Header("Player Detection")]
+    [Tooltip("Leave as Player and make sure the current player is on the Player layer")]
+    [SerializeField]
+    private LayerMask layerMask;
     [Range (5, 90)][SerializeField]
     private float maxAngle;
     [Range (5, 30)][SerializeField]
     private float maxRadius;
+    [Header("Variables for other script to run")]
     public Vector3 playerLastKnownPos;
     public bool isInFov = false;
 
@@ -37,10 +43,10 @@ public class FOVDetection : MonoBehaviour
         Gizmos.DrawRay(transform.position, transform.forward * maxRadius);
     }
 
-    public bool InFOV(Transform checkingObject, Transform target, float maxAngle, float maxRadius)
+    public bool InFOV(Transform checkingObject, Transform target, float maxAngle, float maxRadius, LayerMask layerMask)
     {
         Collider[] overlaps = new Collider[10];
-        int count = Physics.OverlapSphereNonAlloc(checkingObject.position, maxRadius, overlaps);
+        int count = Physics.OverlapSphereNonAlloc(checkingObject.position, maxRadius, overlaps, layerMask);
 
         for (int i = 0; i < count; i++)
         {
@@ -74,7 +80,7 @@ public class FOVDetection : MonoBehaviour
 
     private void Update()
     {
-        isInFov = InFOV(this.transform, player.transform, maxAngle, maxRadius);
+        isInFov = InFOV(this.transform, player.transform, maxAngle, maxRadius, layerMask);
         if (isInFov)
         {
             playerLastKnownPos = player.transform.position;
