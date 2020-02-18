@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     public CharacterController controller;
 
+    [Header("Movement Speeds")]
     public float speed = 0f;
     [SerializeField]
     private float walkSpeed = 0f;
@@ -16,6 +17,7 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float gravity = 0f;
 
+    [Header("Ground Checks")]
     public Transform groundCheck;
     public float groundDistance = 0f;
     public LayerMask groundMask;

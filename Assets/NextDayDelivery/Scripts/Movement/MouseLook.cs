@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-
-    public float mouseSensitivity = 100f;
+    [SerializeField]
+    private float mouseSensitivity = 100f;
 
     public Transform playerBody;
 
@@ -14,6 +14,7 @@ public class MouseLook : MonoBehaviour
     {
         //Locks cursor to screen centre. 
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
