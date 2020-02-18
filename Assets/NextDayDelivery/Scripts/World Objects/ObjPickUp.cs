@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ObjPickUp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public MouseLook freezeCam;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //check to see if player can pick up item.
+    //assign a button to player to pick up.
+    //assign a button for player to throw
+    //assign a button for the player to rotate the object
+    //Fix the object to a position when held, no gravity.
+    //Make it so that they can be throw with decent force
+    //Rotate with mouse.
+    //Stop the player looking around when rotating. 
+
 }
