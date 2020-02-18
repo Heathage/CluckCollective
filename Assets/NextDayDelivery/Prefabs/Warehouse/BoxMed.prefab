@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6723163552379786568}
   - component: {fileID: 6723163552378656648}
   - component: {fileID: 7609853558061151691}
+  - component: {fileID: 2520028804685557738}
   m_Layer: 0
   m_Name: BoxMed
   m_TagString: Untagged
@@ -91,3 +92,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.49549666, y: 0.39732328, z: 0.4901347}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &2520028804685557738
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723163552376457550}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
