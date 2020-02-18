@@ -4,15 +4,19 @@ public class Crouching : MonoBehaviour
 {
     private CharacterController CharacterController;
 
+    [Header("Crouched Values")]
     public float crouching = 0f;
     public float crouchSpeed = 0.1f;
 
+    [Header("Standing Values")]
     public float standing = 0f;
     public float standCam = 0f; 
 
+    [Header("Crouch Checks")]
     public bool crouched = false;
     public bool crouchBlocked = false;
 
+    [Space]
     public GameObject Camera;
 
     void Start()
