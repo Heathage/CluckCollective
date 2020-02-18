@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Leaning : MonoBehaviour
 {
-
+    [Header("Leaning Values")]
     public float leanDistance = 1f;
     public float leanAngle = 30f;
     public float leanSpeed = 0.1f;
@@ -13,6 +13,7 @@ public class Leaning : MonoBehaviour
     float leanLeftDistance;
     float leanRightAngle;
 
+    [Header("Leaning Height")]
     [SerializeField]
     private float camHeight = 1.4f;
     [SerializeField]
