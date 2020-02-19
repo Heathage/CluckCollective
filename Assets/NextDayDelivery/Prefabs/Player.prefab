@@ -96,6 +96,9 @@ MonoBehaviour:
   standCam: 0.8
   crouched: 0
   crouchBlocked: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
   Camera: {fileID: 4639298930499208945}
 --- !u!114 &1176438384498842528
 MonoBehaviour:

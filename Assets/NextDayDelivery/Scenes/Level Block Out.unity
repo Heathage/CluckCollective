@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3886,7 +3886,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14898
+  m_Name: pb_Mesh16822
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -16677,7 +16677,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14756
+  m_Name: pb_Mesh16680
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -16926,7 +16926,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14996
+  m_Name: pb_Mesh16920
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -23432,7 +23432,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15390
+  m_Name: pb_Mesh17324
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -29358,7 +29358,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15198
+  m_Name: pb_Mesh17122
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -32719,7 +32719,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15266
+  m_Name: pb_Mesh17190
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -53137,7 +53137,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14800
+  m_Name: pb_Mesh16724
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -54785,7 +54785,9 @@ GameObject:
   - component: {fileID: 1787241862}
   - component: {fileID: 1787241861}
   - component: {fileID: 1787241860}
+  - component: {fileID: 1787241863}
   - component: {fileID: 1787241859}
+  - component: {fileID: 1787241864}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -54865,6 +54867,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 291
   m_LocalEulerAnglesHint: {x: 0.16800001, y: -0.001, z: -0.98600006}
+--- !u!114 &1787241863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787241858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694a433052b85314aa07210e466503d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 600
+  canHold: 1
+  item: {fileID: 1787241858}
+  tempParent: {fileID: 438476887748098982}
+  isHolding: 0
+  wasThrown: 0
+  dropDistance: 3
+  pickUpDistance: 3
+--- !u!54 &1787241864
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787241858}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1791712264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57405,7 +57443,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14560
+  m_Name: pb_Mesh16478
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -60749,6 +60787,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24c62c118cfb02b45b1f38b147c380a8, type: 3}
+--- !u!1 &438476887748098982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5189089851665739290, guid: 24c62c118cfb02b45b1f38b147c380a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 438476887748098981}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8072444692589619636
 PrefabInstance:
   m_ObjectHideFlags: 0

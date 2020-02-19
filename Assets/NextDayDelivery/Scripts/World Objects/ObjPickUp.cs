@@ -6,6 +6,15 @@ public class ObjPickUp : MonoBehaviour
 {
     public MouseLook freezeCam;
 
+    [SerializeField]
+    private bool holding = false;
+    [SerializeField]
+    private bool inspecting = false;
+
+    public float holdDistance = 0f;
+
+    
+
     //check to see if player can pick up item.
     //assign a button to player to pick up.
     //assign a button for player to throw
