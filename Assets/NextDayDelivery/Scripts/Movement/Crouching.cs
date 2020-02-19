@@ -16,6 +16,8 @@ public class Crouching : MonoBehaviour
     public bool crouched = false;
     public bool crouchBlocked = false;
 
+    public LayerMask mask; // Layers to include when raycasting.
+
     [Space]
     public GameObject Camera;
 
@@ -56,9 +58,6 @@ public class Crouching : MonoBehaviour
         crouched = true;
         CharacterController.center = new Vector3(0, 0, 0);
         CharacterController.height = crouching;
-        //camHeight.currentHeight = 0f;
-        //Camera.transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(0, camHeight.currentHeight, 0), camHeight.leanSpeed);
-
     }
 
     private void unCrouch()
