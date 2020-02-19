@@ -15,6 +15,9 @@ public class ObjInteraction : MonoBehaviour
     public GameObject tempParent;
     public bool isHolding = false;
 
+    //Trying a sound thing - Pls don't kill me James
+    public bool wasThrown = false;
+
     public float dropDistance = 0f;
     public float pickUpDistance = 0f;
 
@@ -42,6 +45,7 @@ public class ObjInteraction : MonoBehaviour
             {
                 item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwForce);
                 isHolding = false;
+                wasThrown = true;
             }
         }
 

@@ -40,6 +40,13 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+# FMOD
+Assets/Plugins/FMOD/Resources/FMODStudioCashe.asset
+Assets/Plugins/FMOD/Resources/FMODStudioCashe.asset.meta
+Assets/StreamingAssets/**/*.bank
+Assets/StreamingAssets/**/*.bank.meta
+fmod_editor.log
+
 
 # End of https://www.gitignore.io/api/unity
 /Logs

@@ -23,7 +23,7 @@ public class PushingObjectsV2 : MonoBehaviour
 
     private void push()
     {
-        Debug.Log("Sucess");
+        //Debug.Log("Sucess");
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None | RigidbodyConstraints.FreezeRotation;
     }
 

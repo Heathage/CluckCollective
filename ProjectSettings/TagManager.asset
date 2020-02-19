@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Hold
   - floor
+  - RhythmFail
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Enemy
   - Push
   - Pick
-  - 
+  - Door
   - 
   - 
   - 

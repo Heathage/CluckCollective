@@ -3,16 +3,19 @@ using UnityEngine;
 
 public class Leaning : MonoBehaviour
 {
-
+    [Header("Leaning Values")]
     public float leanDistance = 1f;
     public float leanAngle = 30f;
     public float leanSpeed = 0.1f;
+
+    public Animator anim;
 
     float leanRightDistance;
     float leanLeftAngle;
     float leanLeftDistance;
     float leanRightAngle;
 
+    [Header("Leaning Height")]
     [SerializeField]
     private float camHeight = 1.4f;
     [SerializeField]
@@ -37,24 +40,22 @@ public class Leaning : MonoBehaviour
     {
         if (Input.GetKey("e"))
         {
-            transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanRightAngle, 100f), leanSpeed * Time.deltaTime);
-            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(leanRightDistance, currentHeight, 0), leanSpeed);
+            anim.SetInteger("Lean", 1);
         }
 
         else if (Input.GetKeyUp("e"))
         {
-            transform.localPosition = new Vector3(0, currentHeight, 0);
+            anim.SetInteger("Lean", 0);
         }
 
         else if (Input.GetKey("q"))
         {
-            transform.localRotation = Quaternion.Lerp(transform.localRotation, new Quaternion(0f, 0f, leanLeftAngle, 0f), leanSpeed * Time.deltaTime);
-            transform.localPosition = Vector3.MoveTowards(transform.localPosition, new Vector3(leanLeftDistance, currentHeight, 0), leanSpeed);
+            anim.SetInteger("Lean", -1);
         }
 
         else if (Input.GetKeyUp("q"))
         {
-            transform.localPosition = new Vector3(0, currentHeight, 0);
+            anim.SetInteger("Lean", 0);
         }
 
         if (Input.GetKey(KeyCode.LeftControl))

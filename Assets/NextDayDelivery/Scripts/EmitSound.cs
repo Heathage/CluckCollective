@@ -12,9 +12,16 @@ public class EmitSound : MonoBehaviour
 
     public Vector3 origin;
     private Vector3 velocity;
+
+    private EnemyAI enemy;
+    private FOVDetection fOVDetection;
+    private ObjInteraction objInteraction;
+
+
     private void Awake()
     {
         rb = this.GetComponent<Rigidbody>();
+        objInteraction = this.gameObject.GetComponent<ObjInteraction>();
     }
     private void FixedUpdate()
     {
@@ -22,37 +29,32 @@ public class EmitSound : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (velocity.y <= 1)
+        if (objInteraction.wasThrown)
         {
-            origin = this.transform.position;
-            
-
-            Collider[] hits = Physics.OverlapSphere(origin, sphereRadius, layerMask, QueryTriggerInteraction.UseGlobal);
-            int i = 0;
-            while (i < hits.Length)
+            if (velocity.y <= 1)
             {
-                if (hits[i].gameObject.GetComponent<EnemyAI>() != null)
+                origin = this.transform.position;
+
+
+                Collider[] hits = Physics.OverlapSphere(origin, sphereRadius, layerMask, QueryTriggerInteraction.UseGlobal);
+                int i = 0;
+                while (i < hits.Length)
                 {
-                    
-                    EnemyAI enemy = hits[i].gameObject.GetComponent<EnemyAI>();
-                    FOVDetection fOVDetection = hits[i].gameObject.GetComponent<FOVDetection>();
-                    enemy.state = EnemyAI.State.Sound;
-                    if(Vector3.Distance(enemy.enemy.transform.position, origin) > 3f)
+                    if (hits[i].gameObject.GetComponent<EnemyAI>() != null)
                     {
-                        enemy.agent.SetDestination(origin);
-                        Debug.Log("Sound");
-                    }
-                    else
-                    {
+
+                        enemy = hits[i].gameObject.GetComponent<EnemyAI>();
+                        fOVDetection = hits[i].gameObject.GetComponent<FOVDetection>();
+
                         fOVDetection.playerLastKnownPos = origin;
                         fOVDetection.playerLastKnownPos.y += 1;
-
-                        enemy.state = EnemyAI.State.TargetLost;
+                        Destroy(this.gameObject);
+                        enemy.state = EnemyAI.State.Sound;
                     }
-                    
+                    i++;
                 }
-                i++;
             }
         }
+        
     }
 }

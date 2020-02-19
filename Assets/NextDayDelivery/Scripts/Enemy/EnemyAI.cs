@@ -5,7 +5,6 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField]
     private GameObject player;
-    public GameObject enemy;
     [Header("Player Lost")]
     [SerializeField]
     private float continueToFollowTime;
@@ -37,7 +36,6 @@ public class EnemyAI : MonoBehaviour
     {
         agent = this.GetComponent<NavMeshAgent>();
         fOVDetection = this.GetComponent<FOVDetection>();
-        enemy = this.gameObject;
         
     }
 
@@ -62,6 +60,7 @@ public class EnemyAI : MonoBehaviour
                 PlayerLost();
                 break;
             case State.Sound:
+                GoToSmallSound();
                 break;
         }
     }
@@ -79,7 +78,7 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(patrolPoints[currentPatrolPoint].transform.position);
         if(Vector3.Distance(this.transform.position, patrolPoints[currentPatrolPoint].transform.position) < 0.6f)
         {
-            Debug.Log("Running");
+            //Debug.Log("Running");
             currentPatrolPoint++;
             if (currentPatrolPoint == patrolPoints.Length)
             {
@@ -116,16 +115,8 @@ public class EnemyAI : MonoBehaviour
     {
 
         //fOVDetection.playerLastKnownPos.y = 2f;
-        lostSearchTime = 5f;
-        if (Vector3.Distance(this.transform.position, fOVDetection.playerLastKnownPos) > 3f)
-        {
-            agent.SetDestination(fOVDetection.playerLastKnownPos);
-            Vector3 targetDirection = fOVDetection.playerLastKnownPos - this.transform.position;
-            float singleStep = playerLostAngularSpeed * Time.deltaTime;
-            Vector3 newDirection = Vector3.RotateTowards(this.transform.forward, targetDirection, singleStep, 0.0f).normalized;
-            this.transform.rotation = Quaternion.LookRotation(newDirection);
-        }
-        else
+        //lostSearchTime = 5f;
+        if (Vector3.Distance(this.transform.position, fOVDetection.playerLastKnownPos) < 4f)
         {
             if (lostSearchTime <= 0)
             {
@@ -136,6 +127,22 @@ public class EnemyAI : MonoBehaviour
                 this.transform.Rotate(Vector3.up * playerLostAngularSpeed * Time.deltaTime);
                 lostSearchTime -= Time.deltaTime;
             }
+        }
+        else
+        {
+            agent.SetDestination(fOVDetection.playerLastKnownPos);
+        }
+    }
+    private void GoToSmallSound()
+    {
+        if (Vector3.Distance(this.transform.position, fOVDetection.playerLastKnownPos) > 3f)
+        {
+            agent.SetDestination(fOVDetection.playerLastKnownPos);
+        }
+        else
+        {
+            lostSearchTime = 5f;
+            state = State.TargetLost;
         }
     }
 

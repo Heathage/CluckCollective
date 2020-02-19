@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 2976018003142393142}
   - component: {fileID: 9047790790268842087}
   - component: {fileID: 174200530581393287}
-  m_Layer: 0
+  - component: {fileID: 7969794476337564832}
+  m_Layer: 13
   m_Name: RegularDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,6 +139,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cb2cf5907b85cf4a96135fd77c7b1e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Locked: 0
+  key: {fileID: 0}
+--- !u!208 &7969794476337564832
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776710044869992110}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1, y: 1.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -1, y: 1, z: 0.5}
+  m_TimeToStationary: 0.5
 --- !u!1 &7669413770924334642
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7658642106299452126}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: DoorRegular
   m_TagString: Untagged
   m_Icon: {fileID: 0}
