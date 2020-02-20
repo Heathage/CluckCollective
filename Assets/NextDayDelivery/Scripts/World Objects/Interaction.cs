@@ -17,7 +17,7 @@ public class Interaction : MonoBehaviour
 
             if(Physics.Raycast(transform.position, transform.forward, out hit, playerReach))
             {
-                hit.collider.GetComponent<ObjPickUp>()?.Interact();
+                hit.collider.gameObject.SendMessage("Interact");
             }
         }
     }
