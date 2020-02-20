@@ -78,7 +78,7 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(patrolPoints[currentPatrolPoint].transform.position);
         if(Vector3.Distance(this.transform.position, patrolPoints[currentPatrolPoint].transform.position) < 0.6f)
         {
-            Debug.Log("Running");
+            //Debug.Log("Running");
             currentPatrolPoint++;
             if (currentPatrolPoint == patrolPoints.Length)
             {
@@ -92,9 +92,10 @@ public class EnemyAI : MonoBehaviour
     {
         if (fOVDetection.isInFov)
         {
-            agent.SetDestination(player.transform.position);
-            continueToFollowTime = 5f;
+            continueToFollowTime = 8f;
             lostSearchTime = 5f;
+            agent.SetDestination(player.transform.position);
+            
         }
         else if (!fOVDetection.isInFov)
         {

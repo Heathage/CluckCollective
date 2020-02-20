@@ -31,8 +31,8 @@ Transform:
   m_LocalPosition: {x: -31.5, y: 1, z: 15.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1980783665706753515}
   - {fileID: 8616977089549177922}
+  - {fileID: 1383805551858242330}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -96,6 +96,9 @@ MonoBehaviour:
   standCam: 0.8
   crouched: 0
   crouchBlocked: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
   Camera: {fileID: 4639298930499208945}
 --- !u!114 &1176438384498842528
 MonoBehaviour:
@@ -138,7 +141,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1421159260040550335}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4639298930499208945
 GameObject:
@@ -153,6 +156,7 @@ GameObject:
   - component: {fileID: 7782577808653646502}
   - component: {fileID: 6500376640609761135}
   - component: {fileID: 6883644395293485319}
+  - component: {fileID: 1043017428761822795}
   m_Layer: 9
   m_Name: PRF_MainCamera3D
   m_TagString: MainCamera
@@ -167,12 +171,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4639298930499208945}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.79999995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5119145565203044787}
-  m_Father: {fileID: 1421159260040550335}
+  m_Father: {fileID: 1383805551858242330}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &262354699801311870
@@ -240,6 +244,7 @@ MonoBehaviour:
   leanDistance: 1
   leanAngle: 30
   leanSpeed: 0.1
+  anim: {fileID: 3603025384573494982}
   camHeight: 0.8
   crouchCam: 0.5
   currentHeight: 0
@@ -259,6 +264,19 @@ MonoBehaviour:
   mouseSensitivity: 100
   canLook: 1
   playerBody: {fileID: 1421159260040550335}
+--- !u!114 &1043017428761822795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4639298930499208945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9bfb4ef65908f54b85c59ef2eee7406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerReach: 2
 --- !u!1 &5189089851665739290
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,3 +307,54 @@ Transform:
   m_Father: {fileID: 1980783665706753515}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5241217007463062374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1383805551858242330}
+  - component: {fileID: 3603025384573494982}
+  m_Layer: 0
+  m_Name: Anchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1383805551858242330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241217007463062374}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1980783665706753515}
+  m_Father: {fileID: 1421159260040550335}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3603025384573494982
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241217007463062374}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 575030d93e66215449c9820d38cb6bb5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -31,7 +31,7 @@ public class EmitSound : MonoBehaviour
     {
         if (objInteraction.wasThrown)
         {
-            if (velocity.y <= 1)
+            if (velocity.y < 1f)
             {
                 origin = this.transform.position;
 
@@ -45,11 +45,13 @@ public class EmitSound : MonoBehaviour
 
                         enemy = hits[i].gameObject.GetComponent<EnemyAI>();
                         fOVDetection = hits[i].gameObject.GetComponent<FOVDetection>();
-
-                        fOVDetection.playerLastKnownPos = origin;
-                        fOVDetection.playerLastKnownPos.y += 1;
-                        Destroy(this.gameObject);
-                        enemy.state = EnemyAI.State.Sound;
+                        if (enemy.state != EnemyAI.State.ChaseTarget)
+                        {
+                            fOVDetection.playerLastKnownPos = origin;
+                            fOVDetection.playerLastKnownPos.y += 1;
+                            enemy.state = EnemyAI.State.Sound;
+                        }
+                        
                     }
                     i++;
                 }

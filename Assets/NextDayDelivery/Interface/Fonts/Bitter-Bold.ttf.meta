@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 915aa6bea903ecb4196300a305fb0a11
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Bitter
+  fontNames:
+  - Bitter
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 36331a78623a6b44193f7fc6b0d5b473, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
