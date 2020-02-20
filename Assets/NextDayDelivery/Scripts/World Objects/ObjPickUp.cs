@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,8 @@ public class ObjPickUp : MonoBehaviour
 {
     Vector3 objectPos;
 
-    //public MouseLook freezeCam;
+    public MouseLook freezeCam;
+
     [SerializeField]
     private bool holding = false;
     [SerializeField]
@@ -62,11 +64,23 @@ public class ObjPickUp : MonoBehaviour
             {
                 yeet();
             }
+
+            if (Input.GetMouseButtonDown(2))
+            {
+                inspect();
+            }
+
+            if (inspecting)
+            {
+                rotate();
+            }
         }
 
         else
         {
             dropped();
+            inspecting = false;
+            freezeCam.canLook = true;
         }
     }
 
@@ -90,6 +104,29 @@ public class ObjPickUp : MonoBehaviour
         item.transform.SetParent(null);
         item.GetComponent<Rigidbody>().useGravity = true;
         item.transform.position = objectPos;
+    }
+
+    void inspect()
+    {
+        if (!inspecting)
+        {
+            Debug.Log("Frozen");
+            inspecting = true;
+            freezeCam.canLook = false;
+        }
+
+        else
+        {
+            Debug.Log("Let it go!");
+            inspecting = false;
+            freezeCam.canLook = true;
+        }
+
+    }
+
+    private void rotate()
+    {
+        item.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0));
     }
 
 

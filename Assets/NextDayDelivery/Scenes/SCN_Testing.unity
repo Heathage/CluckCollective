@@ -112,6 +112,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &5647692 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6883644395293485319, guid: 24c62c118cfb02b45b1f38b147c380a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1599298194}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0cc644e781ab3e4e8f0f118f21e5993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &11520248
 GameObject:
   m_ObjectHideFlags: 0
@@ -39646,6 +39658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f758d924b3e4249934105358fed81f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezeCam: {fileID: 5647692}
   holding: 0
   inspecting: 0
   item: {fileID: 1553860023}
@@ -39974,7 +39987,7 @@ PrefabInstance:
         type: 3}
       propertyPath: tempParent
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1599298195}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b07fe029b7eecb4d9ec1100ab328773, type: 3}
 --- !u!1001 &5266860354242812652
