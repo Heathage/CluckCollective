@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
+    public DoorRegular door;
+
     void Interact()
     {
-        Debug.Log("Beep");
+        door.open();
     }
 }

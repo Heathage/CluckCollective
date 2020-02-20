@@ -14,20 +14,22 @@ public class DoorRegular : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
     }
 
-    void OnTriggerEnter(Collider other)
+    public void open()
     {
-        if (other.gameObject == key) {
-            Debug.Log("Unlocked!!!!");
-            Locked = false;
-        }
-        if (Locked == false)
-        {
-            anim.SetBool("Open?", true);
-        } else
-        {
-            anim.SetTrigger("Locked");
-            Debug.Log("locked!!!");
-        }
+        //if (other.gameObject == key) {
+        //    Debug.Log("Unlocked!!!!");
+        //    Locked = false;
+        //}
+        //if (Locked == false)
+        //{
+        //    anim.SetBool("Open?", true);
+        //} else
+        //{
+        //    anim.SetTrigger("Locked");
+        //    Debug.Log("locked!!!");
+        //}
+
+        anim.SetBool("Open?", true);
         
     }
 
