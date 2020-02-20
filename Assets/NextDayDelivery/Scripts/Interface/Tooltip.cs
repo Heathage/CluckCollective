@@ -17,9 +17,12 @@ public class Tooltip : MonoBehaviour
     public GameObject LetterRef;
     public GameObject TextRef;
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
-        StartCoroutine(ShowTooltip());
+        if (other.gameObject.layer == 9)
+        {
+            StartCoroutine(ShowTooltip());
+        }
     }
 
     IEnumerator ShowTooltip()
