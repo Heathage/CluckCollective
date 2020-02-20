@@ -39625,8 +39625,34 @@ PrefabInstance:
       propertyPath: tempParent
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4148198767470654554, guid: 5b07fe029b7eecb4d9ec1100ab328773, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5b07fe029b7eecb4d9ec1100ab328773, type: 3}
+--- !u!1 &1553860023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4148198767470654555, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+    type: 3}
+  m_PrefabInstance: {fileID: 1553860022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1553860024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553860023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0f758d924b3e4249934105358fed81f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holding: 0
+  inspecting: 0
+  item: {fileID: 1553860023}
+  tempParent: {fileID: 1599298195}
+  dropDistance: 5
+  throwForce: 600
+  wasThrown: 0
 --- !u!1001 &1599298194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39701,6 +39727,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24c62c118cfb02b45b1f38b147c380a8, type: 3}
+--- !u!1 &1599298195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5189089851665739290, guid: 24c62c118cfb02b45b1f38b147c380a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1599298194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1793699592
 Mesh:
   m_ObjectHideFlags: 0

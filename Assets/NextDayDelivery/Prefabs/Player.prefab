@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 7782577808653646502}
   - component: {fileID: 6500376640609761135}
   - component: {fileID: 6883644395293485319}
+  - component: {fileID: 1043017428761822795}
   m_Layer: 9
   m_Name: PRF_MainCamera3D
   m_TagString: MainCamera
@@ -263,6 +264,19 @@ MonoBehaviour:
   mouseSensitivity: 100
   canLook: 1
   playerBody: {fileID: 1421159260040550335}
+--- !u!114 &1043017428761822795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4639298930499208945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9bfb4ef65908f54b85c59ef2eee7406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerReach: 2
 --- !u!1 &5189089851665739290
 GameObject:
   m_ObjectHideFlags: 0
