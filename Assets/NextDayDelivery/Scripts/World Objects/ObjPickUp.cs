@@ -89,6 +89,7 @@ public class ObjPickUp : MonoBehaviour
         item.GetComponent<Rigidbody>().velocity = Vector3.zero;
         item.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         item.transform.SetParent(tempParent.transform, true);
+        //item.transform.localPosition = new Vector3(0, 0, 0);
     }
 
     void yeet()
@@ -126,7 +127,7 @@ public class ObjPickUp : MonoBehaviour
 
     private void rotate()
     {
-        item.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0));
+        item.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0), Space.Self);
     }
 
 
