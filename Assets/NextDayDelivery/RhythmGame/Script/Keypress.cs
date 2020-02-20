@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using FMOD;
 
 public class Keypress : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Keypress : MonoBehaviour
     void Update()
     {
         transform.Translate(-Vector3.right * Time.deltaTime / 2); //Moves each note left slowly
-        //int test = GetComponent<StudioGlobalParameterTrigger>().OverrideValue;
+        int test = GetComponent<StudioGlobalParameterTrigger>().OverrideValue;
         TextMeshPro textmeshPro = GetComponent<TextMeshPro>(); //references the textmeshpro script attatched to the note
         textmeshPro.SetText(keyType); //sets the text attatched to textmesh pro as the key type, which is assigned in the spawner script
     }

@@ -21,9 +21,6 @@
 		<property name="maximum">
 			<value>16</value>
 		</property>
-		<property name="isGlobal">
-			<value>true</value>
-		</property>
 		<property name="initialValue">
 			<value>1</value>
 		</property>

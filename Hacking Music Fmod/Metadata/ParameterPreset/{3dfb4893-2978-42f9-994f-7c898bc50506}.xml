@@ -16,10 +16,7 @@
 			<value>1</value>
 		</property>
 		<property name="maximum">
-			<value>4</value>
-		</property>
-		<property name="isGlobal">
-			<value>true</value>
+			<value>5</value>
 		</property>
 		<property name="initialValue">
 			<value>3</value>
