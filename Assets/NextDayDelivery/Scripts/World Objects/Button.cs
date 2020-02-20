@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    public DoorRegular door;
+    public ShutterDoor door;
 
     void Interact()
     {
