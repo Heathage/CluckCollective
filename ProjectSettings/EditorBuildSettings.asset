@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/NextDayDelivery/Scenes/Level Block Out.unity
+    guid: 984bb55762edd44408bc5a4f469dd1e8
+  m_configObjects: {}
