@@ -7,9 +7,12 @@ public class StationaryAI : EnemyAI
     public LayerMask layerMask;
     private Vector3 rotateAwayFromWall = new Vector3(0, 80, 0);
     [SerializeField]
+    [Range(0, 5)]
     private float wallCheck = 5;
-    [SerializeField]
     private float continueRotation;
+    [SerializeField]
+    [Range(0.5f, 3)]
+    private float setContinueRotation;
 
     protected override void Patrol()
     {
@@ -19,8 +22,9 @@ public class StationaryAI : EnemyAI
 
         if(Physics.Raycast(this.transform.position, this.transform.forward, out hit, wallCheck, layerMask))
         {
-            continueRotation = 5f;
-
+            Quaternion deltaRotation = Quaternion.Euler(rotateAwayFromWall * Time.deltaTime);
+            rb.MoveRotation(rb.rotation * deltaRotation);
+            continueRotation = setContinueRotation;
         }
         else if (continueRotation >= 0)
         {

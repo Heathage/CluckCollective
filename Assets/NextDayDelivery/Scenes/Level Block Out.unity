@@ -31324,6 +31324,16 @@ PrefabInstance:
       propertyPath: playerLostAngularSpeed
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 2742022004046840425, guid: 56da27af3bdee0b469e534b2bc2695cd,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2742022004046840425, guid: 56da27af3bdee0b469e534b2bc2695cd,
+        type: 3}
+      propertyPath: setContinueRotation
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56da27af3bdee0b469e534b2bc2695cd, type: 3}
 --- !u!4 &1265105008 stripped
