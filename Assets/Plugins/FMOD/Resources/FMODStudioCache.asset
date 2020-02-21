@@ -13,54 +13,18 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114085574832790734}
-  - {fileID: 114555205780287062}
-  EditorEvents: []
+  - {fileID: 114042494550866742}
+  - {fileID: 114707853567851808}
+  EditorEvents:
+  - {fileID: 114979904295430012}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114555205780287062}
+  - {fileID: 114707853567851808}
   StringsBanks:
-  - {fileID: 114085574832790734}
-  stringsBankWriteTime: 637176424723357518
+  - {fileID: 114042494550866742}
+  stringsBankWriteTime: 637178766252701636
   cacheVersion: 3
---- !u!114 &114022421073954470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: C:\Users\isaac\Documents\GitHub\CluckCollective\Hacking Music Fmod\Build\Desktop\Master.bank
-  SubDir: 
-  lastModified: 637171267463287779
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1346
-  Exists: 1
---- !u!114 &114046450848931690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: Success Level
-  m_EditorClassIdentifier: 
-  Name: Success Level
-  Min: 0
-  Max: 4
-  Default: 3
-  Exists: 1
---- !u!114 &114085574832790734
+--- !u!114 &114042494550866742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,104 +38,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\isaac\Documents\GitHub\CluckCollective\Hacking Music Fmod\Build\Desktop\Master.strings.bank
   SubDir: 
-  lastModified: 637176424723357518
+  lastModified: 637178766252701636
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 792
+    Value: 836
   Exists: 1
---- !u!114 &114109175069110066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: C:\Users\iw230188\Downloads\Hacking Music Fmod (1)\Hacking Music Fmod\Build\Desktop\Master.strings.bank
-  SubDir: 
-  lastModified: 637170388510562360
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 792
-  Exists: 1
---- !u!114 &114116253510433214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: Success Level
-  m_EditorClassIdentifier: 
-  Name: Success Level
-  Min: 0
-  Max: 4
-  Default: 3
-  Exists: 0
---- !u!114 &114410734916643334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: Section
-  m_EditorClassIdentifier: 
-  Name: Section
-  Min: 1
-  Max: 16
-  Default: 1
-  Exists: 1
---- !u!114 &114413295414788938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: Section
-  m_EditorClassIdentifier: 
-  Name: Section
-  Min: 1
-  Max: 16
-  Default: 1
-  Exists: 0
---- !u!114 &114444001678865704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: C:\Users\isaac\Documents\GitHub\CluckCollective\Hacking Music Fmod\Build\Desktop\Master.strings.bank
-  SubDir: 
-  lastModified: 637171267463297770
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 792
-  Exists: 1
---- !u!114 &114555205780287062
+--- !u!114 &114077712577525314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,13 +58,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\isaac\Documents\GitHub\CluckCollective\Hacking Music Fmod\Build\Desktop\Master.bank
   SubDir: 
-  lastModified: 637176424723287798
+  lastModified: 637178754263288783
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1000
+    Value: 2160928
   Exists: 1
---- !u!114 &114626210640807674
+--- !u!114 &114109166736402276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,14 +74,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: Section
+  m_Name: parameter:/Audiooo/Success Level
+  m_EditorClassIdentifier: 
+  Name: Success Level
+  Min: 0
+  Max: 5
+  Default: 3
+  Exists: 1
+--- !u!114 &114524940601976744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Audiooo/Section
   m_EditorClassIdentifier: 
   Name: Section
   Min: 1
   Max: 16
   Default: 1
+  Exists: 0
+--- !u!114 &114678791322782748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\isaac\Documents\GitHub\CluckCollective\Hacking Music Fmod\Build\Desktop\Master.strings.bank
+  SubDir: 
+  lastModified: 637178754263358820
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 836
   Exists: 1
---- !u!114 &114717183349052892
+--- !u!114 &114693047053078064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,31 +128,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: Success Level
+  m_Name: parameter:/Audiooo/Success Level
   m_EditorClassIdentifier: 
   Name: Success Level
   Min: 0
-  Max: 4
+  Max: 5
   Default: 3
   Exists: 1
---- !u!114 &114723477106557862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: Success Level
-  m_EditorClassIdentifier: 
-  Name: Success Level
-  Min: 0
-  Max: 4
-  Default: 3
-  Exists: 1
---- !u!114 &114774548226382804
+--- !u!114 &114707853567851808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,15 +147,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: C:\Users\iw230188\Downloads\Hacking Music Fmod (1)\Hacking Music Fmod\Build\Desktop\Master.bank
+  Path: C:\Users\isaac\Documents\GitHub\CluckCollective\Hacking Music Fmod\Build\Desktop\Master.bank
   SubDir: 
-  lastModified: 637170388510502358
+  lastModified: 637178766252541659
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1346
+    Value: 2160928
   Exists: 1
---- !u!114 &114998478688935724
+--- !u!114 &114789460084249702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audiooo
+  m_EditorClassIdentifier: 
+  Path: event:/Audiooo
+  guid: 258ff94987b1ea4c86635c5fe6007c8c
+  Banks:
+  - {fileID: 114077712577525314}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114951840495553810}
+  - {fileID: 114109166736402276}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 150009
+--- !u!114 &114855084299126674
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -272,10 +190,69 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: Section
+  m_Name: parameter:/Audiooo/Section
   m_EditorClassIdentifier: 
   Name: Section
   Min: 1
   Max: 16
   Default: 1
   Exists: 1
+--- !u!114 &114951840495553810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Audiooo/Section
+  m_EditorClassIdentifier: 
+  Name: Section
+  Min: 1
+  Max: 16
+  Default: 1
+  Exists: 1
+--- !u!114 &114966822457891618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Audiooo/Success Level
+  m_EditorClassIdentifier: 
+  Name: Success Level
+  Min: 0
+  Max: 5
+  Default: 3
+  Exists: 0
+--- !u!114 &114979904295430012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audiooo
+  m_EditorClassIdentifier: 
+  Path: event:/Audiooo
+  guid: 258ff94987b1ea4c86635c5fe6007c8c
+  Banks:
+  - {fileID: 114707853567851808}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114855084299126674}
+  - {fileID: 114693047053078064}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 150009
