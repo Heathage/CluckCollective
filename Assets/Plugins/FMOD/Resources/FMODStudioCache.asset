@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114085574832790734}
-  - {fileID: 114555205780287062}
+  - {fileID: 114041785486780046}
+  - {fileID: 114499386117164332}
   EditorEvents: []
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114555205780287062}
+  - {fileID: 114499386117164332}
   StringsBanks:
-  - {fileID: 114085574832790734}
-  stringsBankWriteTime: 637176424723357518
+  - {fileID: 114041785486780046}
+  stringsBankWriteTime: 637178746590918482
   cacheVersion: 3
 --- !u!114 &114022421073954470
 MonoBehaviour:
@@ -42,6 +42,26 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1346
+  Exists: 1
+--- !u!114 &114041785486780046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:\CluckCollective\Hacking Music Fmod\Build\Desktop\Master.strings.bank
+  SubDir: 
+  lastModified: 637178746590918482
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 792
   Exists: 1
 --- !u!114 &114046450848931690
 MonoBehaviour:
@@ -171,6 +191,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 792
   Exists: 1
+--- !u!114 &114499386117164332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:\CluckCollective\Hacking Music Fmod\Build\Desktop\Master.bank
+  SubDir: 
+  lastModified: 637178746590918482
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1000
+  Exists: 1
 --- !u!114 &114555205780287062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +226,26 @@ MonoBehaviour:
   Path: C:\Users\isaac\Documents\GitHub\CluckCollective\Hacking Music Fmod\Build\Desktop\Master.bank
   SubDir: 
   lastModified: 637176424723287798
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1000
+  Exists: 1
+--- !u!114 &114606529300040246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:\CluckCollective\Hacking Music Fmod\Build\Desktop\Master.bank
+  SubDir: 
+  lastModified: 637178746590918482
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -261,6 +321,26 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1346
+  Exists: 1
+--- !u!114 &114840278062158032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:\CluckCollective\Hacking Music Fmod\Build\Desktop\Master.strings.bank
+  SubDir: 
+  lastModified: 637178746590918482
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 792
   Exists: 1
 --- !u!114 &114998478688935724
 MonoBehaviour:
