@@ -15,8 +15,7 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\isaac\Documents\GitHub\CluckCollective\Hacking Music
-    Fmod\Hacking Music Fmod.fspro
+  sourceProjectPath: D:\CluckCollective\Hacking Music Fmod\Hacking Music Fmod.fspro
   SourceProjectPathUnformatted: Hacking Music Fmod\Hacking Music Fmod.fspro
   SourceBankPathUnformatted: Hacking Music Fmod\Build
   AutomaticEventLoading: 1
@@ -77,7 +76,8 @@ MonoBehaviour:
   - Platform: 20
     Value: 32
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
