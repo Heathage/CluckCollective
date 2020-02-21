@@ -1,23 +1,25 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField]
-    private GameObject player;
+    protected GameObject player;
     [Header("Player Lost")]
     [SerializeField]
-    private float continueToFollowTime;
+    protected float continueToFollowTime;
     [SerializeField]
-    private float lostSearchTime;
+    protected float lostSearchTime;
     [Range (45, 180)][SerializeField]
-    private float playerLostAngularSpeed;
+    protected float playerLostAngularSpeed;
     [Header ("Patrol")]
     public NavMeshAgent agent;
     [Tooltip ("when the ground is at y = 0 put the patrol point on y = 2. This makes sure that the AI can see the patrol point and detect it.")][SerializeField]
-    private GameObject[] patrolPoints;
+    protected GameObject[] patrolPoints;
     [SerializeField]
-    private int currentPatrolPoint;
+    protected int currentPatrolPoint;
+    protected Rigidbody rb;
 
 
     private FOVDetection fOVDetection;
@@ -36,6 +38,7 @@ public class EnemyAI : MonoBehaviour
     {
         agent = this.GetComponent<NavMeshAgent>();
         fOVDetection = this.GetComponent<FOVDetection>();
+        rb = this.gameObject.GetComponent<Rigidbody>();
         
     }
 
@@ -73,19 +76,9 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void Patrol()
+    protected virtual void Patrol()
     {
-        agent.SetDestination(patrolPoints[currentPatrolPoint].transform.position);
-        if(Vector3.Distance(this.transform.position, patrolPoints[currentPatrolPoint].transform.position) < 0.6f)
-        {
-            //Debug.Log("Running");
-            currentPatrolPoint++;
-            if (currentPatrolPoint == patrolPoints.Length)
-            {
-                currentPatrolPoint = 0;
-            }
-            agent.SetDestination(patrolPoints[currentPatrolPoint].transform.position);
-        }
+
     }
 
     private void FollowPlayer()
