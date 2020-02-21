@@ -29,6 +29,7 @@ public class ObjPickUp : MonoBehaviour
     [Header("Temporary")]
     public GameObject key;
     public DoorRegular door;
+    public GameObject uielement;
 
 
     //public float holdDistance = 0f;
@@ -45,6 +46,7 @@ public class ObjPickUp : MonoBehaviour
 
             if (item.gameObject == key)
             {
+                uielement.SetActive(true);
                 Debug.Log("UNLOCKED");
                 door.Locked = false;
                 item.gameObject.SetActive(false);
