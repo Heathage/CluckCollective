@@ -26,6 +26,11 @@ public class ObjPickUp : MonoBehaviour
     private float throwForce = 600;
     public bool wasThrown = false;
 
+    [Header("Temporary")]
+    public GameObject key;
+    public DoorRegular door;
+
+
     //public float holdDistance = 0f;
 
     public void Interact()
@@ -37,6 +42,13 @@ public class ObjPickUp : MonoBehaviour
             holding = true;
             item.GetComponent<Rigidbody>().useGravity = false;
             Debug.Log("True");
+
+            if (item.gameObject == key)
+            {
+                Debug.Log("UNLOCKED");
+                door.Locked = false;
+                item.gameObject.SetActive(false);
+            }
             //pick up item
         }
 
