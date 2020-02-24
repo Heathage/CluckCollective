@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4148198767470654559}
   - component: {fileID: 4148198767470654552}
   - component: {fileID: 4148198767470654553}
-  - component: {fileID: 4148198767470654554}
+  - component: {fileID: 5151814501969423880}
   m_Layer: 8
   m_Name: OBJ_PickUpTest
   m_TagString: Untagged
@@ -109,7 +109,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4148198767470654554
+--- !u!114 &5151814501969423880
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,13 +118,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4148198767470654555}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 694a433052b85314aa07210e466503d4, type: 3}
+  m_Script: {fileID: 11500000, guid: b0f758d924b3e4249934105358fed81f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwForce: 300
-  canHold: 1
-  item: {fileID: 4148198767470654555}
+  freezeCam: {fileID: 0}
+  holding: 0
+  inspecting: 0
+  item: {fileID: 0}
   tempParent: {fileID: 0}
-  isHolding: 0
-  dropDistance: 3
-  pickUpDistance: 3
+  dropDistance: 0
+  throwForce: 600
+  wasThrown: 0
+  key: {fileID: 0}
+  door: {fileID: 0}
+  uielement: {fileID: 0}
