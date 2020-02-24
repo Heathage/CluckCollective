@@ -277,6 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0255c5f1d3ca3646b9d5f11701b47b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 0}
 --- !u!65 &35133851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17215,13 +17216,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &358047541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1043017428761822795, guid: 24c62c118cfb02b45b1f38b147c380a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1599298194}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9bfb4ef65908f54b85c59ef2eee7406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &397174295
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26436
+  m_Name: pb_Mesh24048
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -20745,7 +20758,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26422
+  m_Name: pb_Mesh24034
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -39359,6 +39372,7 @@ GameObject:
   - component: {fileID: 1379982460}
   - component: {fileID: 1379982459}
   - component: {fileID: 1379982458}
+  - component: {fileID: 1379982463}
   - component: {fileID: 1379982462}
   m_Layer: 11
   m_Name: PushObject
@@ -39455,6 +39469,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1379982463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379982457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3b0503a6c8eef40a5893d21edcf64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1414410669
 GameObject:
   m_ObjectHideFlags: 0
@@ -39505,7 +39531,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26472
+  m_Name: pb_Mesh24082
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -39666,6 +39692,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: tempParent
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4148198767470654555, guid: 5b07fe029b7eecb4d9ec1100ab328773,
         type: 3}
       propertyPath: m_Name
@@ -39736,13 +39766,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4148198767470654554, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+    - target: {fileID: 4148198767470654553, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148198767470654553, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: freezeCam
+      value: 
+      objectReference: {fileID: 5647692}
+    - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1553860023}
+    - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
         type: 3}
       propertyPath: tempParent
       value: 
+      objectReference: {fileID: 1599298195}
+    - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: dropDistance
+      value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4148198767470654554, guid: 5b07fe029b7eecb4d9ec1100ab328773, type: 3}
+    - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: holdCheck
+      value: 
+      objectReference: {fileID: 358047541}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b07fe029b7eecb4d9ec1100ab328773, type: 3}
 --- !u!1 &1553860023 stripped
 GameObject:
@@ -39750,26 +39809,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1553860022}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1553860024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1553860023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0f758d924b3e4249934105358fed81f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freezeCam: {fileID: 5647692}
-  holding: 0
-  inspecting: 0
-  item: {fileID: 1553860023}
-  tempParent: {fileID: 1599298195}
-  dropDistance: 5
-  throwForce: 600
-  wasThrown: 0
 --- !u!1001 &1599298194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39781,6 +39820,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883644395293485319, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: canLook
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1421159260040550335, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
@@ -39856,7 +39900,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26450
+  m_Name: pb_Mesh24062
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -40010,6 +40054,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1956998578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4148198767470654555, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+    type: 3}
+  m_PrefabInstance: {fileID: 4148198768672335931}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4148198768672335931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40017,6 +40067,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: tempParent
+      value: 
+      objectReference: {fileID: 1599298195}
     - target: {fileID: 4148198767470654555, guid: 5b07fe029b7eecb4d9ec1100ab328773,
         type: 3}
       propertyPath: m_Name
@@ -40045,7 +40099,7 @@ PrefabInstance:
     - target: {fileID: 4148198767470654557, guid: 5b07fe029b7eecb4d9ec1100ab328773,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.8
+      value: 11.82
       objectReference: {fileID: 0}
     - target: {fileID: 4148198767470654557, guid: 5b07fe029b7eecb4d9ec1100ab328773,
         type: 3}
@@ -40087,11 +40141,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4148198767470654554, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+    - target: {fileID: 4148198767470654553, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148198767470654553, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: freezeCam
+      value: 
+      objectReference: {fileID: 5647692}
+    - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 1956998578}
+    - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
         type: 3}
       propertyPath: tempParent
       value: 
       objectReference: {fileID: 1599298195}
+    - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: dropDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: holdCheck
+      value: 
+      objectReference: {fileID: 358047541}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b07fe029b7eecb4d9ec1100ab328773, type: 3}
 --- !u!1001 &5266860354242812652
