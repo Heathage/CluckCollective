@@ -26,9 +26,10 @@ public class ObjPickUp : MonoBehaviour
     private float throwForce = 600;
     public bool wasThrown = false;
 
-    [Header("Temporary")]
-    public GameObject key;
-    public DoorRegular door;
+    //[Header("Temporary")]
+    //public GameObject key;
+    //public DoorRegular door;
+    //public GameObject uielement;
 
 
     //public float holdDistance = 0f;
@@ -37,25 +38,27 @@ public class ObjPickUp : MonoBehaviour
     {
         Debug.Log("Interacted");
 
-        if(holding == false)
+        if (holding == false)
         {
             holding = true;
             item.GetComponent<Rigidbody>().useGravity = false;
             Debug.Log("True");
 
-            if (item.gameObject == key)
-            {
-                Debug.Log("UNLOCKED");
-                door.Locked = false;
-                item.gameObject.SetActive(false);
-            }
+            //if (item.gameObject == key)
+            //{
+            //    uielement.SetActive(true);
+            //    Debug.Log("UNLOCKED");
+            //    door.Locked = false;
+            //    item.gameObject.SetActive(false);
+            //}
             //pick up item
         }
 
-        else if(holding == true)
+        else if (holding == true)
         {
             holding = false;
             Debug.Log("False");
+            freezeCam.canLook = true;
             //dont pick up item
         }
     }
@@ -92,7 +95,6 @@ public class ObjPickUp : MonoBehaviour
         {
             dropped();
             inspecting = false;
-            freezeCam.canLook = true;
         }
     }
 
@@ -109,6 +111,7 @@ public class ObjPickUp : MonoBehaviour
         item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwForce);
         holding = false;
         wasThrown = true;
+        freezeCam.canLook = true;
     }
 
     void dropped()
