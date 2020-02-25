@@ -1,14 +1,24 @@
 fileFormatVersion: 2
-guid: c34c4a95142444c4fbef4dd9cf47d1d3
+guid: d6e5f0406d71adb4095490dddde82be8
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCube60
+    100000: Keyboard1
+    100002: Keyboard2
+    100004: Keyboard3
+    100006: //RootNode
+    100008: transform1
+    100010: transform2
+    400000: Keyboard1
+    400002: Keyboard2
+    400004: Keyboard3
+    400006: //RootNode
+    400008: transform1
+    400010: transform2
+    2100000: lambert2
+    2300000: Keyboard3
+    3300000: Keyboard3
+    4300000: Keyboard3
   externalObjects: {}
   materials:
     importMaterials: 1
