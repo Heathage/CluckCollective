@@ -11,8 +11,8 @@ public class EnemyAI : MonoBehaviour
     protected float continueToFollowTime;
     [SerializeField]
     protected float lostSearchTime;
-    [Range (45, 180)][SerializeField]
-    protected float playerLostAngularSpeed;
+    [SerializeField]
+    protected Vector3 rotationSpeed;
     [Header ("Patrol")]
     public NavMeshAgent agent;
     [Tooltip ("when the ground is at y = 0 put the patrol point on y = 2. This makes sure that the AI can see the patrol point and detect it.")][SerializeField]
@@ -32,6 +32,7 @@ public class EnemyAI : MonoBehaviour
         ChaseTarget,
         TargetLost,
         Sound,
+        LostRotation,
     }
 
     private void Awake()
@@ -44,6 +45,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Start()
     {
+        rotationSpeed = new Vector3(0f, 100f, 0f);
         state = State.Patrol;
     }
 
@@ -64,6 +66,9 @@ public class EnemyAI : MonoBehaviour
                 break;
             case State.Sound:
                 GoToSmallSound();
+                break;
+            case State.LostRotation:
+                LostRotation();
                 break;
         }
     }
@@ -110,17 +115,10 @@ public class EnemyAI : MonoBehaviour
 
         //fOVDetection.playerLastKnownPos.y = 2f;
         //lostSearchTime = 5f;
-        if (Vector3.Distance(this.transform.position, fOVDetection.playerLastKnownPos) < 4f)
+        if (Vector3.Distance(this.transform.position, fOVDetection.playerLastKnownPos) < 5f)
         {
-            if (lostSearchTime <= 0)
-            {
-                state = State.Patrol;
-            }
-            else
-            {
-                this.transform.Rotate(Vector3.up * playerLostAngularSpeed * Time.deltaTime);
-                lostSearchTime -= Time.deltaTime;
-            }
+            agent.SetDestination(this.transform.position);
+            state = State.LostRotation;
         }
         else
         {
@@ -140,4 +138,17 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    private void LostRotation()
+    {
+        if (lostSearchTime <= 0)
+        {
+            state = State.Patrol;
+        }
+        else
+        {
+            Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime);
+            rb.MoveRotation(rb.rotation * deltaRotation);
+            lostSearchTime -= Time.deltaTime;
+        }
+    }
 }
