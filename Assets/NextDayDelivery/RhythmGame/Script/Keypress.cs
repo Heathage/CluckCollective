@@ -8,6 +8,17 @@ public class Keypress : MonoBehaviour
 {
     public GameObject hit;
     public string keyType;
+    private string[][] letterlayers = new string[][] { new[] { "z", "v", "m" },
+        new[] { "a", "f", "j", "l"}, 
+        new[] { "q", "r", "u", "p"} };
+
+    private void Start()
+    {
+        if (((IList)letterlayers[0]).Contains(keyType))
+        {
+            transform.position = new Vector2(0, 0);
+        }
+    }
 
     void Update()
     {
