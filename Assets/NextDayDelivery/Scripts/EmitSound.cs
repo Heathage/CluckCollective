@@ -15,13 +15,13 @@ public class EmitSound : MonoBehaviour
 
     private EnemyAI enemy;
     private FOVDetection fOVDetection;
-    private ObjInteraction objInteraction;
+    private ObjPickUp objPickUp;
 
 
     private void Awake()
     {
         rb = this.GetComponent<Rigidbody>();
-        objInteraction = this.gameObject.GetComponent<ObjInteraction>();
+        objPickUp = this.gameObject.GetComponent<ObjPickUp>();
     }
     private void FixedUpdate()
     {
@@ -29,7 +29,7 @@ public class EmitSound : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (objInteraction.wasThrown)
+        if (objPickUp.wasThrown)
         {
             if (velocity.y < 1f)
             {
