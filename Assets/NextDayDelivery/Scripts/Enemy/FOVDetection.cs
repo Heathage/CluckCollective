@@ -22,6 +22,7 @@ public class FOVDetection : MonoBehaviour
     [Header("Variables for other script to run")]
     public Vector3 playerLastKnownPos;
     public bool isInFov = false;
+    public bool canShoot = false;
 
     private void OnDrawGizmos()
     {
