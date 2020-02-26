@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public CharacterController controller;
+    public Crouching crouched;
 
     [Header("Movement Speeds")]
     public float speed = 0f;
@@ -28,16 +29,14 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(speed);
+
         //Checks to see if player is crouching, adjusts speed to match.
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            speed = crouchSpeed;
-        }
-        else if (Input.GetKey(KeyCode.LeftShift))
+        if ((Input.GetKey(KeyCode.LeftShift)) && (!crouched.crouched))
         {
             speed = runSpeed;
         }
-        else
+        else if (!crouched.crouched)
         {
             speed = walkSpeed;
         }

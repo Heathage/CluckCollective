@@ -3,6 +3,7 @@
 public class Crouching : MonoBehaviour
 {
     private CharacterController CharacterController;
+    public Movement speed;
 
     [Header("Crouched Values")]
     public float crouching = 0f;
@@ -55,6 +56,7 @@ public class Crouching : MonoBehaviour
 
     private void crouch()
     {
+        speed.speed = 4.0f;
         crouched = true;
         CharacterController.center = new Vector3(0, 0, 0);
         CharacterController.height = crouching;

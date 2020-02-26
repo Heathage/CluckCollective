@@ -136,8 +136,8 @@ GameObject:
   - component: {fileID: 11520251}
   - component: {fileID: 11520250}
   - component: {fileID: 11520249}
-  - component: {fileID: 11520254}
   - component: {fileID: 11520253}
+  - component: {fileID: 11520254}
   m_Layer: 11
   m_Name: PushTest
   m_TagString: Untagged
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 11520248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c3b0503a6c8eef40a5893d21edcf64c, type: 3}
+  m_Script: {fileID: 11500000, guid: b4b0c96413e2a1a4587f8b633b1e5021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &35133849
@@ -39372,8 +39372,8 @@ GameObject:
   - component: {fileID: 1379982460}
   - component: {fileID: 1379982459}
   - component: {fileID: 1379982458}
-  - component: {fileID: 1379982463}
   - component: {fileID: 1379982462}
+  - component: {fileID: 1379982463}
   m_Layer: 11
   m_Name: PushObject
   m_TagString: Untagged
@@ -39478,7 +39478,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1379982457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c3b0503a6c8eef40a5893d21edcf64c, type: 3}
+  m_Script: {fileID: 11500000, guid: b4b0c96413e2a1a4587f8b633b1e5021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1414410669
@@ -39801,6 +39801,11 @@ PrefabInstance:
       propertyPath: holdCheck
       value: 
       objectReference: {fileID: 358047541}
+    - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: interacting
+      value: 
+      objectReference: {fileID: 358047541}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b07fe029b7eecb4d9ec1100ab328773, type: 3}
 --- !u!1 &1553860023 stripped
@@ -39880,6 +39885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043017428761822795, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: playerReach
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5529375450341024218, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
@@ -40174,6 +40184,11 @@ PrefabInstance:
     - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
         type: 3}
       propertyPath: holdCheck
+      value: 
+      objectReference: {fileID: 358047541}
+    - target: {fileID: 5151814501969423880, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: interacting
       value: 
       objectReference: {fileID: 358047541}
     m_RemovedComponents: []

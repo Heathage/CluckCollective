@@ -7,6 +7,8 @@ public class Interaction : MonoBehaviour
     [SerializeField]
     private float playerReach = 0f;
 
+    public bool holding = false;
+
     void Update()
     {
         Debug.DrawRay(transform.position, transform.forward * playerReach, Color.black);

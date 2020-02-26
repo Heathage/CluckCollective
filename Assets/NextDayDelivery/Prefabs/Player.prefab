@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5529375450341024218}
+  crouched: {fileID: 1446650792666510098}
   speed: 0
   walkSpeed: 8
   crouchSpeed: 4
@@ -90,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c5c303a02a7b04aade6ba25e894cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: {fileID: 5727923493233512174}
   crouching: 0.5
   crouchSpeed: 0.1
   standing: 1.8
@@ -277,6 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReach: 3
+  holding: 0
 --- !u!1 &5189089851665739290
 GameObject:
   m_ObjectHideFlags: 0
