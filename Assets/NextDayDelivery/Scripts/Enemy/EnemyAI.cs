@@ -33,6 +33,7 @@ public class EnemyAI : MonoBehaviour
         TargetLost,
         Sound,
         LostRotation,
+        ShootTarget,
     }
 
     private void Awake()
@@ -69,6 +70,8 @@ public class EnemyAI : MonoBehaviour
                 break;
             case State.LostRotation:
                 LostRotation();
+                break;
+            case State.ShootTarget:
                 break;
         }
     }

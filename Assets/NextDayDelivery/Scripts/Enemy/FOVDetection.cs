@@ -9,21 +9,32 @@ public class FOVDetection : MonoBehaviour
     [Tooltip("Leave as Player and make sure the current player is on the Player layer")]
     [SerializeField]
     private LayerMask layerMask;
-    [Range (5, 90)][SerializeField]
-    private float maxAngle;
-    [Range (5, 30)][SerializeField]
-    private float maxRadius;
+    [Range(5, 90)] [SerializeField]
+    private float fovAngle;
+    [Range(5, 30)] [SerializeField]
+    private float fovRadius;
+    [Header("Shooting Range")]
+    [Range(5, 90)][SerializeField]
+    private float shootingAngle;
+    [Range(5, 30)][SerializeField]
+    private float shootingRadius;
+
     [Header("Variables for other script to run")]
     public Vector3 playerLastKnownPos;
     public bool isInFov = false;
+    public bool canShoot = false;
 
     private void OnDrawGizmos()
     {
+        //Draws fov radius
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, maxRadius);
+        Gizmos.DrawWireSphere(transform.position, fovRadius);
+        //Draws shooting radius
+        Gizmos.color = Color.black;
+        Gizmos.DrawWireSphere(transform.position, shootingRadius);
 
-        Vector3 fovLine1 = Quaternion.AngleAxis(maxAngle, transform.up) * transform.forward * maxRadius;
-        Vector3 fovLine2 = Quaternion.AngleAxis(-maxAngle, transform.up) * transform.forward * maxRadius;
+        Vector3 fovLine1 = Quaternion.AngleAxis(fovAngle, transform.up) * transform.forward * fovRadius;
+        Vector3 fovLine2 = Quaternion.AngleAxis(-fovAngle, transform.up) * transform.forward * fovRadius;
 
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(transform.position, fovLine1);
@@ -37,10 +48,10 @@ public class FOVDetection : MonoBehaviour
         {
             Gizmos.color = Color.green;
         }
-        Gizmos.DrawRay(transform.position, (player.transform.position - transform.position).normalized * maxRadius);
+        Gizmos.DrawRay(transform.position, (player.transform.position - transform.position).normalized * fovRadius);
 
         Gizmos.color = Color.black;
-        Gizmos.DrawRay(transform.position, transform.forward * maxRadius);
+        Gizmos.DrawRay(transform.position, transform.forward * fovRadius);
     }
 
     public bool InFOV(Transform checkingObject, Transform target, float maxAngle, float maxRadius, LayerMask layerMask)
@@ -80,7 +91,7 @@ public class FOVDetection : MonoBehaviour
 
     private void Update()
     {
-        isInFov = InFOV(this.transform, player.transform, maxAngle, maxRadius, layerMask);
+        isInFov = InFOV(this.transform, player.transform, fovAngle, fovRadius, layerMask);
         if (isInFov)
         {
             playerLastKnownPos = player.transform.position;
