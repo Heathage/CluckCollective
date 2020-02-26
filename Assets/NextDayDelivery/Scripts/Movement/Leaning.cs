@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Leaning : MonoBehaviour
 {
+    public MouseLook freezeCam;
+
     [Header("Leaning Values")]
     public float leanDistance = 1f;
     public float leanAngle = 30f;
@@ -41,21 +43,25 @@ public class Leaning : MonoBehaviour
         if (Input.GetKey("e"))
         {
             anim.SetInteger("Lean", 1);
+            freezeCam.canLook = false;
         }
 
         else if (Input.GetKeyUp("e"))
         {
             anim.SetInteger("Lean", 0);
+            freezeCam.canLook = true;
         }
 
         else if (Input.GetKey("q"))
         {
             anim.SetInteger("Lean", -1);
+            freezeCam.canLook = false;
         }
 
         else if (Input.GetKeyUp("q"))
         {
             anim.SetInteger("Lean", 0);
+            freezeCam.canLook = true;
         }
 
         if (Input.GetKey(KeyCode.LeftControl))
