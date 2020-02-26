@@ -7240,7 +7240,7 @@ PrefabInstance:
     - target: {fileID: 8868316516796600481, guid: 3f918d8275742d047a9af2fe6a2056b6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8868316516796600481, guid: 3f918d8275742d047a9af2fe6a2056b6,
         type: 3}
@@ -15901,11 +15901,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 264963473}
-    - target: {fileID: 2742022004046840425, guid: 56da27af3bdee0b469e534b2bc2695cd,
-        type: 3}
-      propertyPath: patrolPoints.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2742022004046840425, guid: 56da27af3bdee0b469e534b2bc2695cd,
         type: 3}
       propertyPath: player
@@ -37978,7 +37973,7 @@ PrefabInstance:
     - target: {fileID: 1937825818465300057, guid: ed1b4384a695c7e43a6e291e5215a95f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1937825818465300057, guid: ed1b4384a695c7e43a6e291e5215a95f,
         type: 3}
