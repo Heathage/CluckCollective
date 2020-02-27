@@ -101,13 +101,25 @@ public class ObjPickUp : MonoBehaviour
     //Disables certain Rigidbody elements so that the object is held in place.
     void heldItem()
     {
+        //Makes the object slightly see through for Quality of Life.
+        //Only Works on Red at the moment.
+        //As long as its not being inspected. 
+        if (!inspecting)
+        {
+            item.GetComponent<MeshRenderer>().material.color = new Color(255, 0, 0, 0.5f);
+        }
+
         item.GetComponent<Rigidbody>().velocity = Vector3.zero;
         item.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         item.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 
         //Sets the position of the item to the specified empty game object space for player held items.
         item.transform.SetParent(tempParent.transform, false);
-        item.transform.localPosition = new Vector3(0, 0, 0);
+
+        if (!inspecting)
+        {
+            item.transform.localPosition = new Vector3(0, 0, 0);
+        }
 
         //Ensures the item is of a certain rotation when it is not being inspected.
         //Keeps player view clear.
@@ -124,6 +136,7 @@ public class ObjPickUp : MonoBehaviour
         item.transform.localPosition = new Vector3(0, 1, 0);
         item.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwForce);
+        freezeCam.canLook = true;
         holding = false;
         wasThrown = true;
     }
@@ -137,6 +150,10 @@ public class ObjPickUp : MonoBehaviour
         item.GetComponent<Rigidbody>().useGravity = true;
         item.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         item.transform.position = objectPos;
+
+        //Returns object to full colour.
+        //Only works with Red at the moment.
+        item.GetComponent<MeshRenderer>().material.color = new Color(255, 0, 0, 1f);
     }
 
     //Allows the player to rotate the held object.
@@ -147,6 +164,11 @@ public class ObjPickUp : MonoBehaviour
         {
             inspecting = true;
             freezeCam.canLook = false;
+
+            item.transform.localPosition = new Vector3(0, 0.5f, 1.5f);
+
+            //Reverts to full colour for inspection.
+            item.GetComponent<MeshRenderer>().material.color = new Color(255, 0, 0, 1f);
         }
 
         //Unfreezes the camera so the player can look around again.

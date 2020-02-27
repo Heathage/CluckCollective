@@ -40211,6 +40211,11 @@ PrefabInstance:
       propertyPath: throwForce
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 4148198767470654559, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 03f06d91ee4a00b4d8ba17190d9b601a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b07fe029b7eecb4d9ec1100ab328773, type: 3}
 --- !u!1001 &5266860354242812652
