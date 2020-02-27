@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class StationaryAI : EnemyAI
 {
-    public LayerMask layerMask;
+    public LayerMask layerMaskStationary;
     private Vector3 rotateAwayFromWall = new Vector3(0, 80, 0);
     [SerializeField]
     [Range(0, 5)]
@@ -20,7 +20,7 @@ public class StationaryAI : EnemyAI
         RaycastHit hit;
         Debug.DrawRay(this.transform.position, this.transform.forward * wallCheck, Color.green);
 
-        if(Physics.Raycast(this.transform.position, this.transform.forward, out hit, wallCheck, layerMask))
+        if(Physics.Raycast(this.transform.position, this.transform.forward, out hit, wallCheck, layerMaskStationary))
         {
             Quaternion deltaRotation = Quaternion.Euler(rotateAwayFromWall * Time.deltaTime);
             rb.MoveRotation(rb.rotation * deltaRotation);
