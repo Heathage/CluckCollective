@@ -48,7 +48,11 @@ public class FOVDetection : MonoBehaviour
         {
             Gizmos.color = Color.green;
         }
-        Gizmos.DrawRay(transform.position, (player.transform.position - transform.position).normalized * fovRadius);
+        if (player != null)
+        {
+            Gizmos.DrawRay(transform.position, (player.transform.position - transform.position).normalized * fovRadius);
+        }
+
 
         Gizmos.color = Color.black;
         Gizmos.DrawRay(transform.position, transform.forward * fovRadius);
@@ -91,12 +95,14 @@ public class FOVDetection : MonoBehaviour
 
     private void Update()
     {
-        isInFov = InFOV(this.transform, player.transform, fovAngle, fovRadius, layerMask);
-        canShoot = InFOV(this.transform, player.transform, shootingAngle, shootingRadius, layerMask);
-        if (isInFov)
+        if(player != null)
         {
-            playerLastKnownPos = player.transform.position;
+            isInFov = InFOV(this.transform, player.transform, fovAngle, fovRadius, layerMask);
+            canShoot = InFOV(this.transform, player.transform, shootingAngle, shootingRadius, layerMask);
+            if (isInFov)
+            {
+                playerLastKnownPos = player.transform.position;
+            }
         }
-
     }
 }

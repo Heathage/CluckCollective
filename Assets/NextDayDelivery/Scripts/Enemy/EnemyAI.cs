@@ -182,7 +182,10 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            agent.SetDestination(player.transform.position);
+            if(player != null)
+            {
+                agent.SetDestination(player.transform.position);
+            }
             if (Time.time >= nextTimeToFire)
             {
                 RaycastHit hit;
