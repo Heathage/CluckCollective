@@ -19,20 +19,14 @@ public class ObjPickUp : MonoBehaviour
     [SerializeField]
     public GameObject tempParent;
 
-    private float distance = 2f;
     [SerializeField]
-    private float dropDistance = 0;
-    [SerializeField]
-    private float throwForce = 600;
+    private float throwForce = 1000;
     public bool wasThrown = false;
 
     [Header("Temporary")]
     public GameObject key;
     public DoorRegular door;
     public GameObject uielement;
-
-
-    //public float holdDistance = 0f;
 
     public void Interact()
     {
@@ -51,7 +45,6 @@ public class ObjPickUp : MonoBehaviour
                 door.Locked = false;
                 item.gameObject.SetActive(false);
             }
-            //pick up item
         }
 
         else if (holding == true)
@@ -59,18 +52,11 @@ public class ObjPickUp : MonoBehaviour
             holding = false;
             Debug.Log("False");
             freezeCam.canLook = true;
-            //dont pick up item
         }
     }
+
     void Update()
     {
-        distance = Vector3.Distance(item.transform.position, tempParent.transform.position);
-
-        if (distance >= dropDistance)
-        {
-            holding = false;
-        }
-
         if (holding)
         {
             heldItem();
@@ -108,7 +94,7 @@ public class ObjPickUp : MonoBehaviour
 
         if (!inspecting)
         {
-            item.transform.localRotation = Quaternion.Euler(160, 0, 0); 
+            item.transform.localRotation = Quaternion.Euler(170, 0, 0); 
         }
     }
 
@@ -119,8 +105,6 @@ public class ObjPickUp : MonoBehaviour
         item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwForce);
         holding = false;
         wasThrown = true;
-        freezeCam.canLook = true;
-
     }
 
     void dropped()
@@ -147,22 +131,10 @@ public class ObjPickUp : MonoBehaviour
             inspecting = false;
             freezeCam.canLook = true;
         }
-
     }
 
     private void rotate()
     {
         item.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0), Space.Self);
     }
-
-
-    //check to see if player can pick up item.
-    //assign a button to player to pick up.
-    //assign a button for player to throw
-    //assign a button for the player to rotate the object
-    //Fix the object to a position when held, no gravity.
-    //Make it so that they can be throw with decent force
-    //Rotate with mouse.
-    //Stop the player looking around when rotating. 
-
 }

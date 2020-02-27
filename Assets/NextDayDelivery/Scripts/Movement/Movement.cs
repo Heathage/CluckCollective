@@ -12,8 +12,6 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float walkSpeed = 0f;
     [SerializeField]
-    private float crouchSpeed = 0f;
-    [SerializeField]
     private float runSpeed = 0f;
     [SerializeField]
     private float gravity = 0f;
