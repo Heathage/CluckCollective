@@ -6,6 +6,7 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField]
     protected GameObject player;
+
     [Header("Player Lost")]
     [SerializeField]
     protected float continueToFollowTime;
@@ -13,6 +14,7 @@ public class EnemyAI : MonoBehaviour
     protected float lostSearchTime;
     [SerializeField]
     protected Vector3 rotationSpeed;
+
     [Header ("Patrol")]
     public NavMeshAgent agent;
     [Tooltip ("when the ground is at y = 0 put the patrol point on y = 2. This makes sure that the AI can see the patrol point and detect it.")][SerializeField]
@@ -21,6 +23,17 @@ public class EnemyAI : MonoBehaviour
     protected int currentPatrolPoint;
     protected Rigidbody rb;
 
+    [Header("SHooting")]
+    [SerializeField]
+    private LayerMask layerMask;
+    [SerializeField]
+    private float damage;
+    [SerializeField]
+    private float range;
+    [SerializeField]
+    private float fireRate;
+
+    private float nextTimeToFire = 0f;
 
     private FOVDetection fOVDetection;
 
@@ -97,6 +110,7 @@ public class EnemyAI : MonoBehaviour
             continueToFollowTime = 8f;
             lostSearchTime = 5f;
             agent.SetDestination(player.transform.position);
+
             if (fOVDetection.canShoot)
             {
                 state = State.ShootTarget;
@@ -166,6 +180,20 @@ public class EnemyAI : MonoBehaviour
         if (!fOVDetection.canShoot)
         {
             state = State.ChaseTarget;
+        }
+        else
+        {
+            agent.SetDestination(player.transform.position);
+            if (Time.time >= nextTimeToFire)
+            {
+                RaycastHit hit;
+
+                if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, layerMask))
+                {
+                    Debug.Log("Player hit");
+                }
+                nextTimeToFire = Time.time + 1f / fireRate;
+            }
         }
     }
 }
