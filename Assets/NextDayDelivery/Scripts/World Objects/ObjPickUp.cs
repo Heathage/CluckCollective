@@ -24,7 +24,7 @@ public class ObjPickUp : MonoBehaviour
 
     [Header("The Yeet")]
     [SerializeField]
-    private float throwForce = 1000;
+    private float throwForce;
     public bool wasThrown = false;
 
     [Header("Temporary")]
@@ -63,9 +63,17 @@ public class ObjPickUp : MonoBehaviour
 
     void Update()
     {
+        throwForce = 1000;
+
         if (holding)
         {
             heldItem();
+
+            if (Input.GetKey(KeyCode.J))
+            {
+                Debug.Log("IT'S OVER 9000!");
+                throwForce = 9001;
+            }
 
             if (Input.GetMouseButtonDown(1))
             {
