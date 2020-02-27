@@ -29,11 +29,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private float damage;
     [SerializeField]
-    private float range;
-    [SerializeField]
     private float fireRate;
-
     private float nextTimeToFire = 0f;
+    private Health health;
 
     private FOVDetection fOVDetection;
 
@@ -54,6 +52,7 @@ public class EnemyAI : MonoBehaviour
         agent = this.GetComponent<NavMeshAgent>();
         fOVDetection = this.GetComponent<FOVDetection>();
         rb = this.gameObject.GetComponent<Rigidbody>();
+        health = player.GetComponent<Health>();
         
     }
 
@@ -190,6 +189,7 @@ public class EnemyAI : MonoBehaviour
 
                 if (Physics.Raycast(this.transform.position, this.transform.forward, out hit, layerMask))
                 {
+                    health.currentHealth -= damage;
                     Debug.Log("Player hit");
                 }
                 nextTimeToFire = Time.time + 1f / fireRate;
