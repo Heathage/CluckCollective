@@ -102,16 +102,28 @@ public class ObjPickUp : MonoBehaviour
     {
         item.GetComponent<Rigidbody>().velocity = Vector3.zero;
         item.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-        item.transform.SetParent(tempParent.transform, true);
+        item.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        item.transform.SetParent(tempParent.transform, false);
+        item.transform.localPosition = new Vector3(0, 0, 0);
+
+        if (!inspecting)
+        {
+            item.transform.localRotation = Quaternion.Euler(160, 0, 0); 
+        }
+
+        //item.transform.parent = tempParent.transform;
         //item.transform.localPosition = new Vector3(0, 0, 0);
     }
 
     void yeet()
     {
+        item.transform.localPosition = new Vector3(0, 1, 0);
+        item.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         item.GetComponent<Rigidbody>().AddForce(tempParent.transform.forward * throwForce);
         holding = false;
         wasThrown = true;
         freezeCam.canLook = true;
+
     }
 
     void dropped()
@@ -119,6 +131,7 @@ public class ObjPickUp : MonoBehaviour
         objectPos = item.transform.position;
         item.transform.SetParent(null);
         item.GetComponent<Rigidbody>().useGravity = true;
+        item.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         item.transform.position = objectPos;
     }
 
