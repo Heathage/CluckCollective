@@ -110,9 +110,6 @@ public class ObjPickUp : MonoBehaviour
         {
             item.transform.localRotation = Quaternion.Euler(160, 0, 0); 
         }
-
-        //item.transform.parent = tempParent.transform;
-        //item.transform.localPosition = new Vector3(0, 0, 0);
     }
 
     void yeet()

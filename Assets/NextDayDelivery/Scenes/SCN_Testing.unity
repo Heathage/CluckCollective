@@ -39831,6 +39831,11 @@ PrefabInstance:
       propertyPath: canLook
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1043017428761822795, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: playerReach
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1421159260040550335, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39886,15 +39891,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1043017428761822795, guid: 24c62c118cfb02b45b1f38b147c380a8,
-        type: 3}
-      propertyPath: playerReach
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5529375450341024218, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
       propertyPath: m_Height
       value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119145565203044787, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24c62c118cfb02b45b1f38b147c380a8, type: 3}
