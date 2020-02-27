@@ -27,8 +27,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(speed);
-
         //Checks to see if player is crouching, adjusts speed to match.
         if ((Input.GetKey(KeyCode.LeftShift)) && (!crouched.crouched))
         {
