@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/NextDayDelivery/Scenes/Level Block Out.unity
     guid: 984bb55762edd44408bc5a4f469dd1e8
+  - enabled: 1
+    path: Assets/NextDayDelivery/Scenes/Menu.unity
+    guid: 6b044df37b1890f4a9ab156037fd7c8d
+  - enabled: 1
+    path: Assets/NextDayDelivery/Scenes/Level 2A.unity
+    guid: 0d016ced81432014785292d025593869
   m_configObjects: {}
