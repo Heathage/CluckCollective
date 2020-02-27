@@ -66,12 +66,13 @@ public class EnemyAI : MonoBehaviour
                 PlayerLost();
                 break;
             case State.Sound:
-                GoToSmallSound();
+                GoToSound();
                 break;
             case State.LostRotation:
                 LostRotation();
                 break;
             case State.ShootTarget:
+                ShootTarget();
                 break;
         }
     }
@@ -96,7 +97,10 @@ public class EnemyAI : MonoBehaviour
             continueToFollowTime = 8f;
             lostSearchTime = 5f;
             agent.SetDestination(player.transform.position);
-            
+            if (fOVDetection.canShoot)
+            {
+                state = State.ShootTarget;
+            }
         }
         else if (!fOVDetection.isInFov)
         {
@@ -128,7 +132,21 @@ public class EnemyAI : MonoBehaviour
             agent.SetDestination(fOVDetection.playerLastKnownPos);
         }
     }
-    private void GoToSmallSound()
+    private void LostRotation()
+    {
+        if (lostSearchTime <= 0)
+        {
+            state = State.Patrol;
+        }
+        else
+        {
+            Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime);
+            rb.MoveRotation(rb.rotation * deltaRotation);
+            lostSearchTime -= Time.deltaTime;
+        }
+    }
+
+    private void GoToSound()
     {
         if (Vector3.Distance(this.transform.position, fOVDetection.playerLastKnownPos) > 3f)
         {
@@ -141,17 +159,13 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void LostRotation()
+
+
+    private void ShootTarget()
     {
-        if (lostSearchTime <= 0)
+        if (!fOVDetection.canShoot)
         {
-            state = State.Patrol;
-        }
-        else
-        {
-            Quaternion deltaRotation = Quaternion.Euler(rotationSpeed * Time.deltaTime);
-            rb.MoveRotation(rb.rotation * deltaRotation);
-            lostSearchTime -= Time.deltaTime;
+            state = State.ChaseTarget;
         }
     }
 }

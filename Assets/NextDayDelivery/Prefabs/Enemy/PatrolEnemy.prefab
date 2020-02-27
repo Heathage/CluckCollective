@@ -191,7 +191,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.7
-  m_Speed: 4
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 360
@@ -219,10 +219,13 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
-  maxAngle: 20
-  maxRadius: 15
+  fovAngle: 20
+  fovRadius: 15
+  shootingAngle: 20
+  shootingRadius: 10
   playerLastKnownPos: {x: 0, y: 0, z: 0}
   isInFov: 0
+  canShoot: 0
 --- !u!54 &3231572028068826426
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -256,7 +259,10 @@ MonoBehaviour:
   lostSearchTime: 0
   rotationSpeed: {x: 0, y: 0, z: 0}
   agent: {fileID: 0}
-  patrolPoints: []
+  patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentPatrolPoint: 0
   state: 0
 --- !u!33 &8883657690769812608

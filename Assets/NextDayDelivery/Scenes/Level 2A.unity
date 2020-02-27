@@ -27274,16 +27274,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 264963473}
-    - target: {fileID: 4363213253791482825, guid: 64188883b9d1b3a4aa2ce8ac5a34e5e4,
-        type: 3}
-      propertyPath: maxRadius
-      value: 7.8
-      objectReference: {fileID: 0}
     - target: {fileID: 5769592648739352932, guid: 64188883b9d1b3a4aa2ce8ac5a34e5e4,
         type: 3}
-      propertyPath: patrolPoints.Array.size
-      value: 3
-      objectReference: {fileID: 0}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 264963473}
     - target: {fileID: 5769592648739352932, guid: 64188883b9d1b3a4aa2ce8ac5a34e5e4,
         type: 3}
       propertyPath: patrolPoints.Array.data[0]
@@ -27299,41 +27294,6 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[2]
       value: 
       objectReference: {fileID: 697792972}
-    - target: {fileID: 5769592648739352932, guid: 64188883b9d1b3a4aa2ce8ac5a34e5e4,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 264963473}
-    - target: {fileID: 3787333463225024085, guid: 64188883b9d1b3a4aa2ce8ac5a34e5e4,
-        type: 3}
-      propertyPath: patrolPoints.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3787333463225024085, guid: 64188883b9d1b3a4aa2ce8ac5a34e5e4,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 264963473}
-    - target: {fileID: 3787333463225024085, guid: 64188883b9d1b3a4aa2ce8ac5a34e5e4,
-        type: 3}
-      propertyPath: patrolPoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 1571259597}
-    - target: {fileID: 3787333463225024085, guid: 64188883b9d1b3a4aa2ce8ac5a34e5e4,
-        type: 3}
-      propertyPath: patrolPoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 697792972}
-    - target: {fileID: 3787333463225024085, guid: 64188883b9d1b3a4aa2ce8ac5a34e5e4,
-        type: 3}
-      propertyPath: patrolPoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 252914679}
-    - target: {fileID: 2206109274600751020, guid: 64188883b9d1b3a4aa2ce8ac5a34e5e4,
-        type: 3}
-      propertyPath: m_Speed
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64188883b9d1b3a4aa2ce8ac5a34e5e4, type: 3}
 --- !u!1001 &632659796

@@ -92,6 +92,7 @@ public class FOVDetection : MonoBehaviour
     private void Update()
     {
         isInFov = InFOV(this.transform, player.transform, fovAngle, fovRadius, layerMask);
+        canShoot = InFOV(this.transform, player.transform, shootingAngle, shootingRadius, layerMask);
         if (isInFov)
         {
             playerLastKnownPos = player.transform.position;
