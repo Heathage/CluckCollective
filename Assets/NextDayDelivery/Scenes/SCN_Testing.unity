@@ -39811,6 +39811,11 @@ PrefabInstance:
       propertyPath: throwForce
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 4148198767470654559, guid: 5b07fe029b7eecb4d9ec1100ab328773,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 03f06d91ee4a00b4d8ba17190d9b601a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b07fe029b7eecb4d9ec1100ab328773, type: 3}
 --- !u!1 &1553860023 stripped
@@ -39835,11 +39840,6 @@ PrefabInstance:
         type: 3}
       propertyPath: canLook
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1043017428761822795, guid: 24c62c118cfb02b45b1f38b147c380a8,
-        type: 3}
-      propertyPath: playerReach
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1421159260040550335, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
@@ -39895,6 +39895,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043017428761822795, guid: 24c62c118cfb02b45b1f38b147c380a8,
+        type: 3}
+      propertyPath: playerReach
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5529375450341024218, guid: 24c62c118cfb02b45b1f38b147c380a8,
         type: 3}
