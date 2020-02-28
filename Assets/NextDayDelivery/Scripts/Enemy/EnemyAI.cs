@@ -17,7 +17,7 @@ public class EnemyAI : MonoBehaviour
 
     [Header ("Patrol")]
     public NavMeshAgent agent;
-    [Tooltip ("when the ground is at y = 0 put the patrol point on y = 2. This makes sure that the AI can see the patrol point and detect it.")][SerializeField]
+    [Tooltip ("when the ground is at y = 0 put the patrol point on y = 1. This makes sure that the AI can see the patrol point and detect it.")][SerializeField]
     protected GameObject[] patrolPoints;
     [SerializeField]
     protected int currentPatrolPoint;
@@ -132,9 +132,6 @@ public class EnemyAI : MonoBehaviour
 
     private void PlayerLost()
     {
-
-        //fOVDetection.playerLastKnownPos.y = 2f;
-        //lostSearchTime = 5f;
         if (Vector3.Distance(this.transform.position, fOVDetection.playerLastKnownPos) < 5f)
         {
             agent.SetDestination(this.transform.position);
