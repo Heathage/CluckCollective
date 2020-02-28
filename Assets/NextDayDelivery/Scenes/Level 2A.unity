@@ -5267,6 +5267,41 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[0]
       value: 
       objectReference: {fileID: 445331659}
+    - target: {fileID: 7865101930356340988, guid: 56da27af3bdee0b469e534b2bc2695cd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cf541f21338aa514dbbb40b0f89aa453, type: 2}
+    - target: {fileID: 7865101930356340988, guid: 56da27af3bdee0b469e534b2bc2695cd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: cf541f21338aa514dbbb40b0f89aa453, type: 2}
+    - target: {fileID: 7865101930356340988, guid: 56da27af3bdee0b469e534b2bc2695cd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: f07cb7c7de804e344b7e868e4dc8bdb6, type: 2}
+    - target: {fileID: 7865101930356340988, guid: 56da27af3bdee0b469e534b2bc2695cd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8ae078a5e0dd11449c00efda98b260c, type: 2}
+    - target: {fileID: 7865101930356340988, guid: 56da27af3bdee0b469e534b2bc2695cd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: f07cb7c7de804e344b7e868e4dc8bdb6, type: 2}
+    - target: {fileID: 7865101930356340988, guid: 56da27af3bdee0b469e534b2bc2695cd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ef2ece91436d8145867354b7209020b, type: 2}
+    - target: {fileID: 7865101930356340988, guid: 56da27af3bdee0b469e534b2bc2695cd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[6]
+      value: 
+      objectReference: {fileID: 2100000, guid: f80dc7bff83033b44b9c54fc36088123, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56da27af3bdee0b469e534b2bc2695cd, type: 3}
 --- !u!1001 &124071340
