@@ -49,11 +49,11 @@ public class Health : MonoBehaviour
         }
         else if(currentHealth >= 0 & currentHealth <= 25)
         {
-            image.color = new Color(image.color.r, image.color.g, image.color.b, .5f);
+            image.color = new Color(image.color.r, image.color.g, image.color.b, .7f);
         }
         else if (currentHealth > 25 & currentHealth <= 50)
         {
-            image.color = new Color(image.color.r, image.color.g, image.color.b, .3f);
+            image.color = new Color(image.color.r, image.color.g, image.color.b, .5f);
         }
         else if (currentHealth > 50 & currentHealth <= 75)
         {
